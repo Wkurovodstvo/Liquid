@@ -6,13 +6,15 @@
 <title>Liquid</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="Images/300px-Team_Liquidlogo_square.png">
-<link rel="stylesheet" type="text/css" href="style.css">
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
 	<div class="container">
-		<div class="row">
+		<div class="row">_
 			<div class="col-md-2 topBar">
 				<div id="logo">
 					<a href="index.html"></a>
@@ -54,39 +56,25 @@
 				<li>History</li>
 			</ul>
 		</div>
-			
-		<div class="row justify-content-md-between sliderwrap">
-				<div class="d-md-flex col-md-2 align-items-md-center justify-content-md-center">
-					<div id="prev" class="arrows prev"></div>
-				</div>
-				<div class="col-md-8 cont">
-					<div id="slider" class="slider"></div>
-				</div>
-				<div class="d-md-flex col-md-2 align-items-md-center justify-content-md-center">
-					<div id="next" class="arrows next"></div>
-				</div>
-		</div>
-
-		<input type="radio" name="point" id="slide1" checked>
-		<input type="radio" name="point" id="slide2">
-		<input type="radio" name="point" id="slide3">
-		<input type="radio" name="point" id="slide4">
-		<input type="radio" name="point" id="slide5">
-		<div class="row justify-content-md-center radioslider">
-			<label for="slide1" id="dot1"></label>
-			<label for="slide2" id="dot2"></label>
-			<label for="slide3" id="dot3"></label>
-			<label for="slide4" id="dot4"></label>
-			<label for="slide5" id="dot5"></label>
-		</div>
 		
-		<ul id="imgs" hidden>
-			<li><img src="Images/DfVkOZzV4AAaqcE.jpg" alt=""></li>
-			<li><img src="Images/chinati.jpg" alt=""></li>
-			<li><img src="Images/epicenter_jugg-small.jpg" alt=""></li>
-			<li><img src="Images/inline_communication_reports.jpg" alt=""></li>
-			<li><img src="Images/Q.jpg" alt=""></li>
-		</ul>
+		<div class="slider-container">
+
+			<div id="prev" class="arrows prev"></div>
+			<div id="next" class="arrows next"></div>
+
+			<div class="row justify-content-md-between sliderwrap">
+				<div class="col-md-8 cont"><img class="slider-img" src="Images/imgonline-com-ua-Resize-0OUgBRhLsN.jpg" alt=""></div>
+				<div class="col-md-8 cont"><img class="slider-img" src="Images/imgonline-com-ua-Resize-3OsStzN36RAW.jpg" alt=""></div>
+				<div class="col-md-8 cont"><img class="slider-img" src="Images/imgonline-com-ua-Resize-8Gchylcmn2IBZ7e.jpg" alt=""></div>
+				<div class="col-md-8 cont"><img class="slider-img" src="Images/imgonline-com-ua-Resize-9TBhUI1VV3SO4.jpg" alt=""></div>
+				<div class="col-md-8 cont"><img class="slider-img" src="Images/imgonline-com-ua-Resize-SIORg0eq73BlYozg.jpg" alt=""></div>
+				<div class="col-md-8 cont"><img class="slider-img" src="Images/imgonline-com-ua-Resize-vIZdMVS0Pjx0A.jpg" alt=""></div>
+				<div class="col-md-8 cont"><img class="slider-img" src="Images/imgonline-com-ua-Resize-VWWmuJRG61Q2G.jpg" alt=""></div>
+			</div>
+
+			<ul class="dots-container"></ul>
+
+		</div>
 
 		<div class="row news-content">
 			<div class="col-md-9 news-wrap">
@@ -522,6 +510,8 @@
 		</div>
 	</div>
 
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
 	<script src="script.js"></script>
 </body>
 </html>

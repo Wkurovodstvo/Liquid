@@ -124,8 +124,13 @@ div.content{
 }
 
 /*news slider*/
-div.sliderwrap{
-	height: 350px;
+.slider-container{
+	margin-top: 50px;
+	position: relative;
+	padding-bottom: 20px;
+}
+
+.sliderwrap{
 	margin-top: 20px;
 	margin: auto;
 	width: 100%;
@@ -133,27 +138,27 @@ div.sliderwrap{
 }
 
 .cont{
-	height: inherit;
+	 height: inherit; 
+	display: flex;
+	justify-content: space-around;
 	overflow: hidden;
 }
 
-div.slider{
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-	height: inherit;
-	overflow: hidden;
-	position: relative;
-	width: inherit;
-	display: flex;
-	justify-content: center;
+
+.slider-img{
+	display: block;
+	margin: 0 auto;
+	box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, .4);
 }
 
 .arrows{
+	z-index: 10;
    width: 30px;
    height: 30px;
-   position: relative;
+   position: absolute;
    cursor: pointer;
+   top: 45%;
+   transition: all ease-out .2s;
 }
 
 .arrows:hover{
@@ -165,16 +170,46 @@ div.slider{
    border-bottom: 3px solid white;
    border-left: 3px solid white;
    transform: rotate(45deg);
+   left: 30px;
 }
    
 .next{
    border-bottom: 3px solid white;
    border-left: 3px solid white;
    transform: rotate(-135deg);
+   right: 30px;
 }
 
-#slide1, #slide2, #slide3, #slide4, #slide5{
-	display: none;
+.dots-container{
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+}
+
+.dots-container li button {
+	max-width: 9px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #FFF;
+  background: Transparent;
+  transition: all 0.5s;
+  display: inline-block;
+  margin: 0px 5px;
+  font: 0px/0px tahoma;
+}
+
+li.slick-active button {
+	background: #FFF;
+}
+
+.dots-container li button:hover {
+	cursor: pointer;
+}
+
+.slider-dot{
+	background: #fff;
+	height: 20px;
+	width: 20px;
 }
 
 .radioslider label{
