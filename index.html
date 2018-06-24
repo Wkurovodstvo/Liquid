@@ -5,16 +5,523 @@
 <meta charset="utf-8">
 <title>Liquid</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="Images/300px-Team_Liquidlogo_square.png">
 <link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 </head>
 <body>
 	<div class="container">
-		<div class="topBar">
-			<a id="logo">
-				
-			</a>
+		<div class="row">
+			<div class="col-md-2 topBar">
+				<div id="logo">
+					<a href="index.html"></a>
+				</div>
+			</div>
+			<div class="col-md topBar">
+				<div class="row justify-content-md-center">
+					<div id="alienware" class="widesponsor contain">
+						<a href="#"></a>
+					</div>
+				</div>
+				<div class="row justify-content-md-around">
+					<div id="hyperx" class="narrowsponsor contain">
+						<a href="#"></a>
+					</div>
+					<div id="sap" class="narrowsponsor contain">
+						<a href="#"></a>
+					</div>
+					<div id="twitch" class="narrowsponsor contain">
+						<a href="#"></a>
+					</div>
+				</div>
+				<div class="row justify-content-md-around">
+					<div id="ballistix" class="widesponsor contain">
+						<a href="#"></a>
+					</div>
+					<div id="needforseat" class="widesponsor contain">
+						<a href="#"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu">
+			<ul class="row justify-content-md-around menulist">
+				<li>Rankings</li>
+				<li>Events</li>
+				<li>Players</li>
+				<li>Forum</li>
+				<li>History</li>
+			</ul>
+		</div>
+			
+		<div class="row justify-content-md-between sliderwrap">
+				<div class="d-md-flex col-md-2 align-items-md-center justify-content-md-center">
+					<div id="prev" class="arrows prev"></div>
+				</div>
+				<div class="col-md-8 cont">
+					<div id="slider" class="slider"></div>
+				</div>
+				<div class="d-md-flex col-md-2 align-items-md-center justify-content-md-center">
+					<div id="next" class="arrows next"></div>
+				</div>
+		</div>
+
+		<input type="radio" name="point" id="slide1" checked>
+		<input type="radio" name="point" id="slide2">
+		<input type="radio" name="point" id="slide3">
+		<input type="radio" name="point" id="slide4">
+		<input type="radio" name="point" id="slide5">
+		<div class="row justify-content-md-center radioslider">
+			<label for="slide1" id="dot1"></label>
+			<label for="slide2" id="dot2"></label>
+			<label for="slide3" id="dot3"></label>
+			<label for="slide4" id="dot4"></label>
+			<label for="slide5" id="dot5"></label>
+		</div>
+		
+		<ul id="imgs" hidden>
+			<li><img src="Images/DfVkOZzV4AAaqcE.jpg" alt=""></li>
+			<li><img src="Images/chinati.jpg" alt=""></li>
+			<li><img src="Images/epicenter_jugg-small.jpg" alt=""></li>
+			<li><img src="Images/inline_communication_reports.jpg" alt=""></li>
+			<li><img src="Images/Q.jpg" alt=""></li>
+		</ul>
+
+		<div class="row news-content">
+			<div class="col-md-9 news-wrap">
+				<h2 class="d-md-flex justify-content-md-left">News</h2>
+				<div class="d-md-flex flex-wrap justify-content-md-around">
+					<div class="news-card">
+						<div class="card-img" id="card-1"></div>
+						<div class="card-content">
+							<span class="game-icon">SC2</span>
+							<div class="active-text">MaNa and his miracle run at WCS Austin</div>
+							<p>MaNa's underdog run to the finals of WCS Austin was the story of the tournament, even though it ended in a 2-4 defeat to Serral.</p>
+						</div>
+						<div class="card-time">
+							<p>June 12 2018</p>
+						</div>
+				 	</div>
+				 	<div class="news-card">
+						<div class="card-img" id="card-2"></div>
+						<div class="card-content">
+							<span class="game-icon">LoL</span>
+							<div class="active-text">Liquid LoL: Welcome Dodo as assistant coach</div>
+							<p>We are pleased to announce that Kang “Dodo” Jun-hyeuk has joined Team Liquid as assistant coach for our 2018 roster. In his debut, Dodo joins the team in their voyage to Korea for a preseason bootcamp.</p>
+						</div>
+						<div class="card-time">
+							<p>December 09 2017</p>
+						</div>
+				 	</div>
+				 	<div class="news-card">
+						<div class="card-img" id="card-3"></div>
+						<div class="card-content">
+							<span class="game-icon">Clash Royale</span>
+							<div class="active-text">Welcome Clash Royale's CMcHugh to Team Liquid</div>
+							<p>Not too long ago, we announced our official foray into the mobile world through Arena of Valor. Now, we're pleased to continue our touch screen conquest in Supercell's popular card game, Clash Royale, by adding Collin "CMcHugh" McHugh to the Liquid family.</p>
+						</div>
+						<div class="card-time">
+							<p>November 25 2017</p>
+						</div>
+				 	</div>
+				 	<div class="news-card">
+						<div class="card-img" id="card-4"></div>
+						<div class="card-content">
+							<span class="game-icon">Globe</span>
+							<div class="active-text">We're Hiring: 2x Back End Developers</div>
+							<p>Team Liquid's roots are in community websites and wikis, and we are looking for two (2) back end developers to continue building our current and future web properties.</p>
+						</div>
+						<div class="card-time">
+							<p>April 14 2018</p>
+						</div>
+				 	</div>
+				 	<div class="news-card">
+						<div class="card-img" id="card-5"></div>
+						<div class="card-content">
+							<span class="game-icon">CS:GO</span>
+							<div class="active-text">Welcome, TACO!</div>
+							<p>Our five players are ready! After a week of speculation, we would like to announce that we have signed Epitácio "TACO" Pessoa de Melo Filho to our CS:GO team.</p>
+						</div>
+						<div class="card-time">
+							<p>April 06 2018</p>
+						</div>
+				 	</div>
+				 	<div class="news-card">
+						<div class="card-img" id="card-6"></div>
+						<div class="card-content">
+							<span class="game-icon">Quake</span>
+							<div class="active-text">Welcome, whaz!</div>
+							<p>Our Quake team just got bigger, though this addition looked more like destiny. We have signed Gaven "whaz" Sorensen after his impressive performances with rapha and DaHanG in Quake: Sacrifice.</p>
+						</div>
+						<div class="card-time">
+							<p>November 26 2017</p>
+						</div>
+				 	</div>
+				 </div>
+			</div>
+			<div class="col-md-3 results-wrap">
+				<h2 class="d-md-flex justify-content-md-left">Results</h2>
+				<div class="d-md-flex-column disc">
+						<div class="disc-head d-md-flex flex-row justify-content-md-center">Dota2</div>
+						<div class="disc-body d-md-flex flex-column">
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag usa"></div>
+									<p>Leviathan</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag usa"></div>
+									<p>coL</p>
+								</div>
+								<div>0:1</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag usa"></div>
+									<p>Immortals</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag usa"></div>
+									<p>VG.JS</p>
+								</div>
+								<div>0:1</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag usa"></div>
+									<p>OpTic</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag china"></div>
+									<p>Baidu</p>
+								</div>
+								<div>1:0</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag eu"></div>
+									<p>BlinkPool</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag eu"></div>
+									<p>Kingdra</p>
+								</div>
+								<div>1:0</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag brazil"></div>
+									<p>SG</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag peru"></div>
+									<p>Torus</p>
+								</div>
+								<div>2:0</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag usa"></div>
+									<p>OpTic</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag usa"></div>
+									<p>Leviathan</p>
+								</div>
+								<div>1:0</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag usa"></div>
+									<p>VG.JS</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag canada"></div>
+									<p>JaS</p>
+								</div>
+								<div>1:0</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag eu"></div>
+									<p>OG</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag sweden"></div>
+									<p>Alliance</p>
+								</div>
+								<div>1:0</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag usa"></div>
+									<p>OpTic</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag usa"></div>
+									<p>CoC</p>
+								</div>
+								<div>1:0</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag poland"></div>
+									<p>Kinguin</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag poland"></div>
+									<p>SNG</p>
+								</div>
+								<div>1:0</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag sweden"></div>
+									<p>Alliance</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag canada"></div>
+									<p>WaR</p>
+								</div>
+								<div>0:1</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag eu"></div>
+									<p>FinalTribe</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag eu"></div>
+									<p>Kingdra</p>
+								</div>
+								<div>0:1</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag usa"></div>
+									<p>JaS</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag usa"></div>
+									<p>Leviathan</p>
+								</div>
+								<div>1:0</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag usa"></div>
+									<p>OpTic</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag usa"></div>
+									<p>VG.JS</p>
+								</div>
+								<div>0:1</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag china"></div>
+									<p>Baidu</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag canada"></div>
+									<p>JaS</p>
+								</div>
+								<div>1:0</div>
+							</div>
+						</div>
+				</div>
+				<div class="d-md-flex-column disc">
+						<div class="disc-head d-md-flex flex-row justify-content-md-center">CS:GO</div>
+						<div class="disc-body d-md-flex flex-column">
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag argentina"></div>
+									<p>Isurus G</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag brazil"></div>
+									<p>W7M</p>
+								</div>
+								<div>0:2</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag usa"></div>
+									<p>NRG</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag usa"></div>
+									<p>Freedom 35</p>
+								</div>
+								<div>2:0</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag usa"></div>
+									<p>Rogue</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag usa"></div>
+									<p>Entourage</p>
+								</div>
+								<div>2:0</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag eu"></div>
+									<p>eUnited</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag eu"></div>
+									<p>Armada CS</p>
+								</div>
+								<div>2:0</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag poland"></div>
+									<p>Kinguin</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag serbia"></div>
+									<p>Valiance</p>
+								</div>
+								<div>12:16</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag eu"></div>
+									<p>Imperial</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag cis"></div>
+									<p>Gambit</p>
+								</div>
+								<div>16:7</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag brazil"></div>
+									<p>NTC</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag serbia"></div>
+									<p>Valiance</p>
+								</div>
+								<div>7:16</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag china"></div>
+									<p>EHOME</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag china"></div>
+									<p>CyberZen</p>
+								</div>
+								<div>0:2</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag cis"></div>
+									<p>Gambit</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag poland"></div>
+									<p>x-kom</p>
+								</div>
+								<div>16:6</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag russia"></div>
+									<p>Winstrike</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag poland"></div>
+									<p>Kinguin</p>
+								</div>
+								<div>9:16</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag china"></div>
+									<p>VG.Flash</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag china"></div>
+									<p>5POWER</p>
+								</div>
+								<div>1:2</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag china"></div>
+									<p>Roar</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag china"></div>
+									<p>EHOME</p>
+								</div>
+								<div>0:2</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag china"></div>
+									<p>CyberZen</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag mongolia"></div>
+									<p>Mongolz</p>
+								</div>
+								<div>2:0</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag eu"></div>
+									<p>Imperial</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag bulgaria"></div>
+									<p>Windigo</p>
+								</div>
+								<div>16:5</div>
+							</div>
+							<div class="d-md-flex flex-row justify-content-md-around">
+								<div class="d-md-flex flex-row">
+									<div class="flag australia"></div>
+									<p>Grayhound</p>
+								</div>
+								<div class="d-md-flex flex-row">
+									<div class="flag australia"></div>
+									<p>Chiefs</p>
+								</div>
+								<div>2:0</div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer d-md-flex flex-row">
+			<div class="d-md-flex col-md-3 justify-content-md-center align-items-md-center footer-element">
+				Team Liquid 2009-2018 © 
+			</div>
+			<div class="d-md-flex col-md-6 justify-content-md-center align-items-md-center footer-element">			
+				All copyrights and trademarks belong to their respective owners.
+			</div>
+			<div class="d-md-flex col-md-3 justify-content-md-around align-items-md-center footer-element">
+				<div class="narrowsponsor" id="youtube"></div>
+				<div class="narrowsponsor" id="facebook"></div>
+				<div class="narrowsponsor" id="twitter"></div>
+				<div class="narrowsponsor" id="vk"></div>
+				<div class="narrowsponsor" id="steam"></div>
+				<div class="narrowsponsor" id="insta"></div>
+			</div>
 		</div>
 	</div>
+
+	<script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,156 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background: url("Images/WHDQ-512499480.jpg") no-repeat;
+	background-size: cover;
+}
+
+div.border{
+	border: solid black;
+	border-width: 1px;
+}
+/*header*/
+.topBar{
+	height: 200px;
+	background-color: #F7F7F7;
+}
+
+#logo{
+	height: 180px;
+	width: 180px;
+	padding: 10px;
+	background:url("Images/Team_Liquid_logo.png") center no-repeat; 
+	background-size: contain;                          
+    cursor:pointer; 
+}
+/*sponsors in header*/
+.widesponsor{
+	height: 40px;
+	width: 150px;
+	cursor: pointer;
+}
+
+.narrowsponsor{
+	height: 100px;
+	width: 100px;
+	cursor: pointer;
+}
+
+#alienware{
+	background:url("Images/AlienWare_logo.png") center no-repeat; 
+	background-size: contain;                         
+}
+
+#hyperx{
+	background:url("Images/1510679196_HyperX.png") center no-repeat;
+	background-size: contain;  
+}
+
+#sap{
+	background:url("Images/sap.png") center no-repeat;  
+	background-size: contain;  
+}
+
+#twitch{
+	background:url("Images/2000px-Twitch_logo_(wordmark_only).svg.png") center no-repeat;  
+	background-size: contain;
+}
+
+#ballistix{
+	background:url("Images/19777-1505833888-020b2ed1373222ecdcbad94d37dc9050.png") center no-repeat;  
+	background-size: contain;
+}
+
+#needforseat{
+	background:url("Images/NEEDforSEAT_new_websiteG2-478-200.png") center no-repeat;  
+	background-size: contain;
+}
+
+#youtube{
+	background:url("Images/youtube_PNG18.png") center no-repeat;  
+	background-size: contain;
+}
+
+#facebook{
+	background:url("Images/facebook_logos_PNG19753.png") center no-repeat;  
+	background-size: contain;
+}
+
+#twitter{
+	background:url("Images/twitter_PNG28.png") center no-repeat;  
+	background-size: contain;
+}
+
+#vk{
+	background:url("Images/VK_Logo.png") center no-repeat;  
+	background-size: contain;
+}
+
+#insta{
+	background:url("Images/insta.png") center no-repeat;  
+	background-size: contain;
+}
+
+#steam{
+	background:url("Images/886a6d6d.png") center no-repeat;  
+	background-size: contain;
+}
+
+/*top menu*/
+div.menu{
+	background-color: #0E2240;
+}
+
+ul.menulist{
+	list-style-type: none;
+}
+
+ul.menulist li{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	padding: 10px;
+	color: #F7F7F7;
+}
+
+ul.menulist li:hover{
+	color: black;
+	cursor: pointer;
+}
+/*main content*/
+div.content{
+	height: 100%;
+}
+
+/*main content*/
+.rank-content{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	color: white;
+}
+
+.rank-wrap h2{
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.bordur{
+	border: 1px solid white;
+}
+
+.rank-wrap{
+	background-color: #0E2240;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.footer{
+	background-color: #101010;
+	font-size: 10pt;
+	font-weight: 200;
+}
+
+.footer .footer-element:not(:last-child){
+	border-right: 1px solid;
+}
