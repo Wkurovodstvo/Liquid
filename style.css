@@ -206,57 +206,6 @@ li.slick-active button {
 	cursor: pointer;
 }
 
-.slider-dot{
-	background: #fff;
-	height: 20px;
-	width: 20px;
-}
-
-.radioslider label{
-	cursor: pointer;
-	display: inline-block;
-	height: 15px;
-	margin: 10px;
-	position: relative;
-	width: 15px;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	-o-border-radius: 50%;
-	border-radius: 50%;
-	-webkit-transition: background ease-in-out .5s;
-	-moz-transition: background ease-in-out .5s;
-	-o-transition: background ease-in-out .5s;
-	transition: background ease-in-out .5s;
-}
-
-.radioslider label:after {
-	border: 2px solid #0E2240;
-	content: " ";
-	display: block;
-	height: 15px;
-	position: absolute;
-	width: 15px;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	-o-border-radius: 50%;
-	border-radius: 50%;
-}
-
-#slide1:checked ~ .radioslider #dot1,
-#slide2:checked ~ .radioslider #dot2,
-#slide3:checked ~ .radioslider #dot3,
-#slide4:checked ~ .radioslider #dot4,
-#slide5:checked ~ .radioslider #dot5 {
-	background: #ddd;
-}
-
-#slider:hover{
-	cursor: pointer;
-	-webkit-transform: scale(1.2);
-	-moz-transform: scale(1.2);
-	-o-transform: scale(1.2);
-	transform: scale(1.2);
-}
 /*news content*/
 .news-content{
 	font-family: 'Montserrat', sans-serif;
@@ -281,7 +230,7 @@ li.slick-active button {
 .card-img{
 	top: 0;
 	height: 40%;
-	width: inherit;
+	width: 100%;
 }
 
 .card-content{

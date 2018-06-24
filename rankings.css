@@ -166,8 +166,35 @@ div.content{
 	border-top-right-radius: 10px;
 }
 
-.icon-up-small{
-	float: right;
+.rank-entity:hover{
+	background-color: #031126;
+	cursor: pointer;
+}
+
+.rank-team{
+	background-color: #031126;
+	margin: 0;
+	padding: 0;
+}
+
+.rank-team_avatar{
+	height: 150px;
+	width: 150px;
+	top: 20px;
+	border-radius: 50%;
+	background-color: white;
+	position: relative;
+	text-align: center;
+	color: black;
+	vertical-align: center;
+	line-height: 150px;
+	display: inline-block;
+	margin-bottom: 25px;
+}
+
+
+.rank-team_info{
+
 }
 
 .flag{
@@ -175,6 +202,21 @@ div.content{
 	height: inherit;
 	width: 30px;
 	margin-right: 10px;
+}
+
+.red{
+	color: #841306;
+	font-weight: 500;
+}
+
+.green{
+	color: green;
+	font-weight: 500;
+}
+
+.white{
+	color: #f0f0f0;
+	font-weight: 500;
 }
 /*footer*/
 .footer{
