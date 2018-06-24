@@ -7,6 +7,20 @@ body{
 	background-size: cover;
 }
 
+@import url("fontello.css") print;
+
+@font-face {
+  font-family: 'fontello';
+  src: url('Fonts/fontello.eot?64809578');
+  src: url('Fonts/fontello.eot?64809578#iefix') format('embedded-opentype'),
+       url('Fonts/fontello.woff2?64809578') format('woff2'),
+       url('Fonts/fontello.woff?64809578') format('woff'),
+       url('Fonts/fontello.ttf?64809578') format('truetype'),
+       url('Fonts/fontello.svg?64809578#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 div.border{
 	border: solid black;
 	border-width: 1px;
@@ -31,7 +45,7 @@ div.border{
 	width: 150px;
 	cursor: pointer;
 }
-
+/*sponsors*/
 .narrowsponsor{
 	height: 100px;
 	width: 100px;
@@ -129,6 +143,13 @@ div.content{
 	font-weight: 600;
 	color: white;
 }
+/*rank bar*/
+.rank-wrap a{
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	text-align: center;
+}
 
 .rank-wrap h2{
 	margin-left: 5px;
@@ -145,6 +166,17 @@ div.content{
 	border-top-right-radius: 10px;
 }
 
+.icon-up-small{
+	float: right;
+}
+
+.flag{
+	display: inline-block;
+	height: inherit;
+	width: 30px;
+	margin-right: 10px;
+}
+/*footer*/
 .footer{
 	background-color: #101010;
 	font-size: 10pt;
@@ -153,4 +185,94 @@ div.content{
 
 .footer .footer-element:not(:last-child){
 	border-right: 1px solid;
+}
+/*flags*/
+.usa{
+	background: url("Images/flag-400.png") center no-repeat;
+	background-size: contain;
+}
+
+.china{
+	background: url("Images/flag-400 (1).png") center no-repeat;
+	background-size: contain;
+}
+
+.eu{
+	background: url("Images/eu.jpg") center no-repeat;
+	background-size: contain;
+}
+
+.brazil{
+	background: url("Images/flag-400 (2).png") center no-repeat;
+	background-size: contain;
+}
+
+.peru{
+	background: url("Images/flag-400 (3).png") center no-repeat;
+	background-size: contain;
+}
+
+.canada{
+	background: url("Images/canada-flag-icon-free-download.jpg") center no-repeat;
+	background-size: contain;
+}
+
+.sweden{
+	background: url("Images/flag-400 (4).png") center no-repeat;
+	background-size: contain;
+}
+
+.poland{
+	background: url("Images/flag-400 (5).png") center no-repeat;
+	background-size: contain;
+}
+
+.argentina{
+	background: url("Images/flag-400 (6).png") center no-repeat;
+	background-size: contain;
+}
+
+.serbia{
+	background: url("Images/images.png") center no-repeat;
+	background-size: contain;
+}
+
+.cis{
+	background: url("Images/cis.JPG") center no-repeat;
+	background-size: contain;
+}
+
+.russia{
+	background: url("Images/flag-400 (7).png") center no-repeat;
+	background-size: contain;
+}
+
+.mongolia{
+	background: url("Images/flag-800.png") center no-repeat;
+	background-size: contain;
+}
+
+.bulgaria{
+	background: url("Images/bulgaria-flag-icon-free-download.jpg") center no-repeat;
+	background-size: contain;
+}
+
+.australia{
+	background: url("Images/australia-flag-icon-free-download.jpg") center no-repeat;
+	background-size: contain;
+}
+
+.philippines{
+	background: url("Images/FIPHI-2__67447.1407859160.380.380.jpg") center no-repeat;
+	background-size: contain;
+}
+
+.malaysia{
+	background: url("Images/500px-Flag_of_Malaysia.svg.png") center no-repeat;
+	background-size: contain;
+}
+
+.ukraine{
+	background: url("Images/41KUrmBIIFL._SX425_.jpg") center no-repeat;
+	background-size: contain;
 }
