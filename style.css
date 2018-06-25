@@ -261,13 +261,15 @@ li.slick-active button {
 .news-content{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 600;
-	color: white;
+	color: #ddd;
+	box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, .4);
 }
 
 .news-wrap{
 	border-right: 1px solid black;
 	background-color: #0E2240;
 	border-top-left-radius: 10px;
+	padding: 10px;
 }
 
 .news-card{
@@ -326,38 +328,39 @@ li.slick-active button {
 }
 
 #card-1{
-	background: url("Images/mana.JPG") center no-repeat;
+	background: url("Images/mana.JPG") center center;
 	background-size: cover;
 }
 
 #card-2{
-	background: url("Images/dodo.JPG") center no-repeat;
+	background: url("Images/dodo.JPG") center center no-repeat;
 	background-size: cover;
 }
 
 #card-3{
-	background: url("Images/cmchugh.JPG") center no-repeat;
+	background: url("Images/cmchugh.JPG") center center no-repeat;
 	background-size: cover;
 }
 
 #card-4{
-	background: url("Images/hiring.JPG") center no-repeat;
+	background: url("Images/hiring.JPG") center center no-repeat;
 	background-size: cover;
 }
 
 #card-5{
-	background: url("Images/taco.JPG") center no-repeat;
+	background: url("Images/taco.JPG") center center no-repeat;
 	background-size: cover;
 }
 
 #card-6{
-	background: url("Images/whaz.JPG") center no-repeat;
+	background: url("Images/whaz.JPG") center center no-repeat;
 	background-size: cover;
 }
 /*results content*/
 .results-wrap{
 	background-color: #0E2240;
 	border-top-right-radius: 10px;
+	padding: 10px;
 }
 
 .disc{
