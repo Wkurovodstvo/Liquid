@@ -463,6 +463,7 @@ li.slick-active button {
 }
 /*footer*/
 .footer{
+	color: #bbb;
 	background-color: #101010;
 	font-size: 10pt;
 	font-weight: 200;
