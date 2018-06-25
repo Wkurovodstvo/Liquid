@@ -2,6 +2,10 @@
 	box-sizing: border-box;
 }
 
+html a,div,textarea,button,input{
+	outline: none;
+}
+
 body{
 	background: url("Images/WHDQ-512499480.jpg") no-repeat;
 	background-size: cover;
@@ -21,6 +25,10 @@ body{
   font-style: normal;
 }
 
+#csgo, #sc2{
+	display: none;
+}
+
 div.border{
 	border: solid black;
 	border-width: 1px;
@@ -32,6 +40,7 @@ div.border{
 }
 
 #logo{
+	display: inline-block;
 	height: 180px;
 	width: 180px;
 	padding: 10px;
@@ -103,12 +112,7 @@ div.border{
 }
 
 #insta{
-	background:url("Images/insta.png") center no-repeat;  
-	background-size: contain;
-}
-
-#steam{
-	background:url("Images/886a6d6d.png") center no-repeat;  
+	background:url("Images/instagram_PNG3.png") center no-repeat;  
 	background-size: contain;
 }
 
@@ -126,6 +130,16 @@ ul.menulist li{
 	font-weight: 600;
 	padding: 10px;
 	color: #F7F7F7;
+}
+
+ul.menulist li a{
+	text-decoration: none;
+	color: #F7F7F7;
+}
+
+ul.menulist li a:hover{
+	color: black;
+	cursor: pointer;
 }
 
 ul.menulist li:hover{
@@ -183,18 +197,60 @@ div.content{
 	top: 20px;
 	border-radius: 50%;
 	background-color: white;
-	position: relative;
+	position: absolute;
 	text-align: center;
-	color: black;
 	vertical-align: center;
 	line-height: 150px;
 	display: inline-block;
 	margin-bottom: 25px;
+	transition: 0.2;
 }
 
+.rank-team_avatar:hover{
+	transform: scale(1.2);
+	cursor: pointer;
+}
 
-.rank-team_info{
+.container{
+	margin-top: 15px;
+	margin-bottom: 40px;
+}
 
+.team-prev{
+	margin-top: 100px;
+	background-color: #101010;
+	display: inline-block;
+	padding: 10px;
+}
+
+.team-prev div small{
+	padding-top: 80px;
+}
+
+.player-card{
+	text-align: center;
+	background-color: #0E2240; 
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.player-card img{
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	text-align: center;
+	background-color: #0E2240; 
+	object-fit: cover;
+}
+
+.player-card:hover{
+	cursor: pointer;
+	transform: translateY(3px);
+	transition: 0.2;
+}
+
+.player-card img{
+	border-radius: 50%;
 }
 
 .flag{
@@ -309,6 +365,11 @@ div.content{
 	background-size: contain;
 }
 
+.germany{
+	background: url("Images/de-flag.jpg") center no-repeat;
+	background-size: contain;
+}
+
 .malaysia{
 	background: url("Images/500px-Flag_of_Malaysia.svg.png") center no-repeat;
 	background-size: contain;
@@ -318,3 +379,57 @@ div.content{
 	background: url("Images/41KUrmBIIFL._SX425_.jpg") center no-repeat;
 	background-size: contain;
 }
+
+.denmark{
+	background: url("Images/denmark-flag.png") center no-repeat;
+	background-size: contain;
+}
+
+.france{
+	background: url("Images/255px-Flag_of_France.svg.png") center no-repeat;
+	background-size: contain;
+}
+
+.turkey{
+	background: url("Images/220px-Flag_of_Turkey.svg.png") center no-repeat;
+	background-size: contain;
+}
+
+.korea{
+	background: url("Images/kr.png") center no-repeat;
+	background-size: contain;
+}
+
+.netherlands{
+	background: url("Images/2982-004-ABEB3852.jpg") center no-repeat;
+	background-size: contain;
+}
+
+.finland{
+	background: url("Images/finland-flag.png") center no-repeat;
+	background-size: contain;
+}
+
+.mexico{
+	background: url("Images/800px-Flag_of_Mexico_(1916-1934).svg.png") center no-repeat;
+	background-size: contain;
+}
+
+
+
+/*teams*/
+.virtus-pro{
+	background: url("Images/69726.6-e1506633333708.jpg") center no-repeat;
+	background-size: cover;
+}
+
+.astralis{
+	background: url("Images/flat800x800075f_u2.jpg") center no-repeat;
+	background-size: cover;
+}
+
+.maru{
+	background: url("Images/maru5.jpg") center no-repeat;
+	background-size: cover;
+}
+
