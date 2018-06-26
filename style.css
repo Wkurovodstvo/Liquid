@@ -2,6 +2,10 @@
 	box-sizing: border-box;
 }
 
+html a,div,textarea,button,input,li{
+	outline: none;
+}
+
 body{
 	background: url("Images/WHDQ-512499480.jpg") no-repeat;
 	background-size: cover;
@@ -11,6 +15,11 @@ div.border{
 	border: solid black;
 	border-width: 1px;
 }
+
+.container{
+	margin-top: 15px;
+	margin-bottom: 40px;
+}
 /*header*/
 .topBar{
 	height: 200px;
@@ -18,6 +27,7 @@ div.border{
 }
 
 #logo{
+	display: inline-block;
 	height: 180px;
 	width: 180px;
 	padding: 10px;
@@ -89,12 +99,7 @@ div.border{
 }
 
 #insta{
-	background:url("Images/insta.png") center no-repeat;  
-	background-size: contain;
-}
-
-#steam{
-	background:url("Images/886a6d6d.png") center no-repeat;  
+	background:url("Images/instagram_PNG3.png") center no-repeat;  
 	background-size: contain;
 }
 
@@ -112,6 +117,16 @@ ul.menulist li{
 	font-weight: 600;
 	padding: 10px;
 	color: #F7F7F7;
+}
+
+ul.menulist li a{
+	text-decoration: none;
+	color: #F7F7F7;
+}
+
+ul.menulist li a:hover{
+	color: black;
+	cursor: pointer;
 }
 
 ul.menulist li:hover{
@@ -144,11 +159,19 @@ div.content{
 	overflow: hidden;
 }
 
-
 .slider-img{
-	display: block;
+	position: relative;
+	display: flex;
 	margin: 0 auto;
 	box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, .4);
+}
+
+.slider-img h3{
+	position: absolute;
+	display: inline-block;
+	left:50%;
+	top:0;
+	color: white;
 }
 
 .arrows{
@@ -233,6 +256,10 @@ li.slick-active button {
 	top: 0;
 	height: 40%;
 	width: 100%;
+}
+
+.card-img:hover{
+	cursor: pointer;
 }
 
 .card-content{

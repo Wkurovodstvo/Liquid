@@ -15,58 +15,44 @@
 <div class="container">
 		<div class="row">
 			<div class="col-md-2 topBar">
-				<div id="logo">
-					<a href="index.html"></a>
-				</div>
+				<a href="index.html" id="logo"></a>
 			</div>
 			<div class="col-md topBar">
 				<div class="row justify-content-md-center">
-					<div id="alienware" class="widesponsor contain">
-						<a href="#"></a>
-					</div>
+					<a href="https://www.dell.com/en-us/gaming/alienware?~ck=mn" target="_blank" id="alienware" class="widesponsor"></a>
 				</div>
 				<div class="row justify-content-md-around">
-					<div id="hyperx" class="narrowsponsor contain">
-						<a href="#"></a>
-					</div>
-					<div id="sap" class="narrowsponsor contain">
-						<a href="#"></a>
-					</div>
-					<div id="twitch" class="narrowsponsor contain">
-						<a href="#"></a>
-					</div>
+					<a href="http://hyperx.com/" target="_blank" id="hyperx" class="narrowsponsor"></a>
+					<a href="https://www.sap.com/index.html" target="_blank" id="sap" class="narrowsponsor"></a>
+					<a href="https://www.twitch.tv/" target="_blank" id="twitch" class="narrowsponsor"></a>
 				</div>
 				<div class="row justify-content-md-around">
-					<div id="ballistix" class="widesponsor contain">
-						<a href="#"></a>
-					</div>
-					<div id="needforseat" class="widesponsor contain">
-						<a href="#"></a>
-					</div>
+					<a href="https://ballistixgaming.com" target="_blank" id="ballistix" class="widesponsor"></a>
+					<a href="http://www.needforseat.com" target="_blank" id="needforseat" class="widesponsor"></a>
 				</div>
 			</div>
 		</div>
 		<div class="menu">
 			<ul class="row justify-content-md-around menulist">
-				<li>Rankings</li>
-				<li>Events</li>
-				<li>Players</li>
-				<li>Forum</li>
-				<li>History</li>
+				<li><a href="#logo">Rankings</a></li>
+				<li><a href="#">Events</a></li>
+				<li><a href="#">Players</a></li>
+				<li><a href="#">Forun</a></li>
+				<li><a href="#">History</a></li>
 			</ul>
 		</div>
 		<div class="menu">
 			<ul class="row justify-content-md-around menulist">
-				<li>Dota2</li>
-				<li>CS:GO</li>
-				<li>SC2</li>
+				<li id="dota2_btn" onclick="showDota2()">Dota2</li>
+				<li id="csgo_btn" onclick="showCsGo()">CS:GO</li>
+				<li id="sc2_btn" onclick="showSc2()">SC2</li>
 			</ul>
 		</div>
 		<div class="row rank-content">
-			<div class="col-md-12 rank-wrap">
+			<div class="col-md-12 rank-wrap" id="dota2">
 				<h2 class="row justify-content-md-left">Rankings</h2>
 				<div class="row">
-					<div class="d-md-flex flex-column col-md-6 bordur">
+					<div class="d-md-flex flex-column col-md-6">
 						<div class="row align-items-md-center rank-entity">
 							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
 								1
@@ -394,13 +380,16 @@
 						</div>
 					</div>
 					<div class="col-md-6 d-md-flex justify-content-md-center">
-						<div class="rank-team col-md-12">	
+						<div class="rank-team col-md-12">		
 							<div class="d-md-flex justify-content-md-center">
-								<div class="rank-team_avatar"></div>
-							</div>			
-							<div class="d-md-flex flex-row justify-content-md-between">				
+								<div class="rank-team_avatar virtus-pro"></div>
+							</div>		
+							<div class="d-md-flex flex-row justify-content-md-between align-items-md-end team-prev">				
 								<div>Virtus Pro</div>
-								<div>Total money eared: 6,383,506$</div>
+								<div>
+									<small>Money earned:</small>
+									<div>6,383,506$</div>
+								</div>
 							</div>	
 							<div class="container">
 								<div class="row">				
@@ -415,6 +404,857 @@
 									<div class="col-md-3 text-center">75%</div>
 									<div class="col-md-3 text-center">54%</div>
 								</div>
+								<div class="row">				
+									<div class="col-md-3">Matches:</div>
+									<div class="col-md-3 text-center d-md-flex flex-row justify-content-md-center">
+										<p class="green">9</p>
+										<p class="white">/0/</p>
+										<p class="red">2</p>
+									</div>
+									<div class="col-md-3 text-center d-md-flex flex-row justify-content-md-center">
+										<p class="green">6</p>
+										<p class="white">/0/</p>
+										<p class="red">2</p>
+									</div>
+									<div class="col-md-3 text-center d-md-flex flex-row justify-content-md-center">
+										<p class="green">505</p>
+										<p class="white">/65/</p>
+										<p class="red">363</p>
+									</div>
+								</div>
+								<div class="row d-md-flex flex-row justify-content-md-around">
+									<p>Current streak</p>
+									<p class="red">1 loss in a row</p>
+								</div>
+							</div>
+							<div class="container">
+								<div class="d-md-flex flex-row justify-content-md-center">
+									Roster
+								</div>
+									<div class="row">
+										<div class="col-md-4">
+											<div class="player-card">
+												<img src="Images/imgonline-com-ua-Resize-31P59JPKTB1DT5s.jpg">
+												<p>SoloLineAbuse</p>
+											</div>
+											<div class="player-card">
+												<img src="Images/crop.jpg">
+												<p>Noone-</p>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="player-card">
+												<img src="Images/imgonline-com-ua-Resize-jxCY3Sgw4G2.jpg">
+												<p>9pasha</p>
+											</div>
+											<div class="player-card">
+												<img src="Images/e4a2bf51d9d5dc21c6b72774df935adf.jpg">
+												<p>RAMZES666</p>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="player-card">
+												<img src="Images/600px-RodjER_SL_i-League_Invitational_S3.jpg">
+												<p>RodjeR</p>
+											</div>
+										</div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12 rank-wrap" id="csgo">
+				<h2 class="row justify-content-md-left">Rankings</h2>
+				<div class="row">
+					<div class="d-md-flex flex-column col-md-6">
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								1
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag denmark"></div>
+								Astralis
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1536
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								2
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag eu"></div>
+								FaZe Clan
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1414
+								<a><i class="icon-down-small red"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								3
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag ukraine"></div>
+								Natus Vincere
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1411
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								4
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag eu"></div>
+								mousesports
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1325
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								5
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag usa"></div>
+								Team Liquid
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1303
+								<a><i class="icon-down-small red"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								6
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag usa"></div>
+								NRG eSports
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1290
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								7
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag france"></div>
+								G2 Esports
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1260
+								<a><i class="icon-down-small red"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								8
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag brazil"></div>
+								SK Gaming
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1257
+								<a><i class="icon-down-small red"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								9
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag denmark"></div>
+								North
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1255
+								<a><i class="icon-down-small red"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								10
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag turkey"></div>
+								Space Soldiers
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1241
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								11
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag sweden"></div>
+								Fnatic
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1215
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								12
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag usa"></div>
+								Cloud9
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1211
+								<a><i class="icon-down-small red"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								13
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag sweden"></div>
+								Ninjas in Pyjamas
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1208
+								<a><i class="icon-down-small red"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								14
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag sweden"></div>
+								GODSENT
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1206
+								<a><i class="icon-down-small red"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								15
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag eu"></div>
+								HellRaisers
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1205
+								<a><i class="icon-down-small red"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								16
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag eu"></div>
+								Imperial
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1179
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								17
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag poland"></div>
+								AGO Gaming
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1177
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								18
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag australia"></div>
+								ORDER
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1171
+								<a><i class="icon-down-small red"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								19
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag bulgaria"></div>
+								Wirtigo
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1170
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								20
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag china"></div>
+								Tainted Minds
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1170
+								<a><i class="icon-down-small red"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								21
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag germany"></div>
+								BIG
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1168
+								<a><i class="icon-down-small red"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								22
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag china"></div>
+								TyLoo
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1159
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								23
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag australia"></div>
+								Grayhound Gaming
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1156
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								24
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag usa"></div>
+								Rogue
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1152
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								25
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag eu"></div>
+								OpTic Gaming
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1149
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 d-md-flex justify-content-md-center">
+						<div class="rank-team col-md-12">		
+							<div class="d-md-flex justify-content-md-center">
+								<div class="rank-team_avatar astralis"></div>
+							</div>		
+							<div class="d-md-flex flex-row justify-content-md-between align-items-md-end team-prev">				
+								<div>Astralis</div>
+								<div>
+									<small>Money earned:</small>
+									<div>2,961,118$</div>
+								</div>
+							</div>	
+							<div class="container">
+								<div class="row">				
+									<div class="col-md-3">Statistic</div>
+									<div class="col-md-3 text-center">May</div>
+									<div class="col-md-3 text-center">June</div>
+									<div class="col-md-3 text-center">All time</div>
+								</div>
+								<div class="row">				
+									<div class="col-md-3">Win rate</div>
+									<div class="col-md-3 text-center">100%</div>
+									<div class="col-md-3 text-center">92%</div>
+									<div class="col-md-3 text-center">65%</div>
+								</div>
+								<div class="row">				
+									<div class="col-md-3">Matches:</div>
+									<div class="col-md-3 text-center d-md-flex flex-row justify-content-md-center">
+										<p class="green">4</p>
+										<p class="white">/0/</p>
+										<p class="red">0</p>
+									</div>
+									<div class="col-md-3 text-center d-md-flex flex-row justify-content-md-center">
+										<p class="green">11</p>
+										<p class="white">/0/</p>
+										<p class="red">1</p>
+									</div>
+									<div class="col-md-3 text-center d-md-flex flex-row justify-content-md-center">
+										<p class="green">287</p>
+										<p class="white">/1/</p>
+										<p class="red">146</p>
+									</div>
+								</div>
+								<div class="row d-md-flex flex-row justify-content-md-around">
+									<p>Current streak</p>
+									<p class="green">11 wins in a row</p>
+								</div>
+							</div>
+							<div class="container">
+								<div class="d-md-flex flex-row justify-content-md-center">
+									Roster
+								</div>
+									<div class="row">
+										<div class="col-md-4">
+											<div class="player-card">
+												<img src="Images/225px-Dupreeh_2016.jpg">
+												<p>dupreeh</p>
+											</div>
+											<div class="player-card">
+												<img src="Images/225px-Dev1ce_2016.jpg">
+												<p>dev1ce.</p>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="player-card">
+												<img src="Images/225px-Xyp9x_2016.jpg">
+												<p>Xyp9x</p>
+											</div>
+											<div class="player-card">
+												<img src="Images/Astralis_gla1ve.jpg">
+												<p>gla1ve</p>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="player-card">
+												<img src="Images/600px-Magisk_at_DH_Marseille_2018.jpg">
+												<p>Magisk-</p>
+											</div>
+										</div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><div class="col-md-12 rank-wrap" id="sc2">
+				<h2 class="row justify-content-md-left">Rankings</h2>
+				<div class="row">
+					<div class="d-md-flex flex-column col-md-6">
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								1
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag korea"></div>
+								Maru
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1348
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								2
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag korea"></div>
+								HerO
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1261
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								3
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag korea"></div>
+								Classic
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1257
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								4
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag korea"></div>
+								Rogue
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1247
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								5
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag korea"></div>
+								TY
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1227
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								6
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag korea"></div>
+								Dark.Sc2
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1206
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								7
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag korea"></div>
+								Stats
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1185
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								8
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag usa"></div>
+								Neeb
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1184
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								9
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag korea"></div>
+								soO
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1181
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								10
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag korea"></div>
+								Dear
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1170
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								11
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag korea"></div>
+								Solar
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1157
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								12
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag korea"></div>
+								Zest
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1140
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								13
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag korea"></div>
+								Byun
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1135
+								<a><i class="icon-up-small gren"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								14
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag korea"></div>
+								GuMiho
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1135
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								15
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag korea"></div>
+								herO.kr
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1127
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								16
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag netherlands"></div>
+								uThermal
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1114
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								17
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag finland"></div>
+								Serral
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1107
+								<a><i class="icon-down-small red"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								18
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag korea"></div>
+								sOs.sc2
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1105
+								<a><i class="icon-down-small red"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								19
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag korea"></div>
+								Trap
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1084
+								<a><i class="icon-down-small red"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								20
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag korea"></div>
+								INnoVation
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1079
+								<a><i class="icon-down-small red"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								21
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag canada"></div>
+								Scarlett
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1073
+								<a><i class="icon-down-small red"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								22
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag mexico"></div>
+								SpeCial.Sc2
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1072
+								<a><i class="icon-down-small red"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								23
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag poland"></div>
+								Elazer
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1070
+								<a><i class="icon-down-small red"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								24
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag france"></div>
+								PtitDrogo
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1060
+								<a><i class="icon-down-small red"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+								25
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+								<div class="flag korea"></div>
+								Impact
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+								1042
+								<a><i class="icon-down-small red"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 d-md-flex justify-content-md-center">
+						<div class="rank-team col-md-12">		
+							<div class="d-md-flex justify-content-md-center">
+								<div class="rank-team_avatar maru"></div>
+							</div>		
+							<div class="d-md-flex flex-row justify-content-md-between align-items-md-end team-prev">				
+								<div>Maru</div>
+								<div>
+									<small>Money earned:</small>
+									<div>633,547$</div>
+								</div>
+							</div>	
+							<div class="container">
+								<div class="row">				
+									<div class="col-md-3">Statistic</div>
+									<div class="col-md-3 text-center">May</div>
+									<div class="col-md-3 text-center">June</div>
+									<div class="col-md-3 text-center">All time</div>
+								</div>
+								<div class="row">				
+									<div class="col-md-3">Win rate</div>
+									<div class="col-md-3 text-center">100%</div>
+									<div class="col-md-3 text-center">100%</div>
+									<div class="col-md-3 text-center">62%</div>
+								</div>
+								<div class="row">				
+									<div class="col-md-3">Matches:</div>
+									<div class="col-md-3 text-center d-md-flex flex-row justify-content-md-center">
+										<p class="green">4</p>
+										<p class="white">/0/</p>
+										<p class="red">0</p>
+									</div>
+									<div class="col-md-3 text-center d-md-flex flex-row justify-content-md-center">
+										<p class="green">3</p>
+										<p class="white">/0/</p>
+										<p class="red">0</p>
+									</div>
+									<div class="col-md-3 text-center d-md-flex flex-row justify-content-md-center">
+										<p class="green">181</p>
+										<p class="white">/5/</p>
+										<p class="red">105</p>
+									</div>
+								</div>
+								<div class="row d-md-flex flex-row justify-content-md-around">
+									<p>Current streak</p>
+									<p class="green">7 wins in a row</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -424,20 +1264,37 @@
 
 		<div class="footer d-md-flex flex-row">
 			<div class="d-md-flex col-md-3 justify-content-md-center align-items-md-center footer-element">
-				Team Liquid 2009-2018 © 
+				Team Liquid 2009-2018 Â© 
 			</div>
 			<div class="d-md-flex col-md-6 justify-content-md-center align-items-md-center footer-element">			
 				All copyrights and trademarks belong to their respective owners.
 			</div>
 			<div class="d-md-flex col-md-3 justify-content-md-around align-items-md-center footer-element">
-				<div class="narrowsponsor" id="youtube"></div>
-				<div class="narrowsponsor" id="facebook"></div>
-				<div class="narrowsponsor" id="twitter"></div>
-				<div class="narrowsponsor" id="vk"></div>
-				<div class="narrowsponsor" id="steam"></div>
-				<div class="narrowsponsor" id="insta"></div>
+				<a class="narrowsponsor" id="youtube" href="https://www.youtube.com/channel/UCLSWNf28X3mVTxTT3_nLCcw" target="_blank"></a>
+				<a class="narrowsponsor" id="facebook" href="https://www.facebook.com/teamliquid" target="_blank"></a>
+				<a class="narrowsponsor" id="twitter" href="https://twitter.com/teamliquid" target="_blank"></a>
+				<a class="narrowsponsor" id="vk" href="https://vk.com/teamliquidpro" target="_blank"></a>
+				<a class="narrowsponsor" id="insta" href="https://www.instagram.com/teamliquid/" target="_blank"></a>
+			</div>
 			</div>
 		</div>
 	</div>
+	<script>
+    function showDota2() {
+		document.getElementById('csgo').style.display = "none";
+    	document.getElementById('sc2').style.display = "none";
+   		document.getElementById('dota2').style.display = "block";
+	}	 
+	function showCsGo() {
+		document.getElementById('csgo').style.display = "block";
+    	document.getElementById('sc2').style.display = "none";
+   		document.getElementById('dota2').style.display = "none"
+	}	
+	function showSc2() {
+   		document.getElementById('csgo').style.display = "none";
+    	document.getElementById('sc2').style.display = "block";
+   		document.getElementById('dota2').style.display = "none"
+	}	
+  </script>
 </body>
 </html>
