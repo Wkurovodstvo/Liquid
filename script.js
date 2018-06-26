@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    // $('.dropdown-toggle').dropdown();
     $('.sliderwrap').slick({
         responsive: {
             breakpoint: 1000,
