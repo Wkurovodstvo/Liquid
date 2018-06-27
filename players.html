@@ -12,12 +12,33 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 </head>
 <body>
+	<div class="modal" id="modalLog">
+		<div class="modal-content">
+			<span class="close">&times</span>
+				<div>
+					<input type="text" placeholder="nickname">
+				</div>
+				<div>
+					<input type="text" placeholder="e-mail">
+				</div>
+				<div>
+					<input type="text" placeholder="phone">
+				</div>
+				<div>
+					<button class="submit-button" id="submit">submit</button>
+				</div>
+		</div>
+	</div>
+<button onclick="topFunction()" id="toTop" title="Go to top"></button>
 <div class="container">
 		<div class="row">
-			<div class="col-md-2 topBar">
+						<div class="col-md-3 col-sm-10 col-8 topBar">
 				<a href="index.html" id="logo"></a>
 			</div>
-			<div class="col-md topBar">
+			<div class="col-sm-2 col-4 topBar d-md-none">
+				<div class="hamburger" onclick="showMenu()"></div>
+			</div>
+			<div class="col-md topBar sponsors">
 				<div class="row justify-content-md-center">
 					<a href="https://www.dell.com/en-us/gaming/alienware?~ck=mn" target="_blank" id="alienware" class="widesponsor"></a>
 				</div>
@@ -33,16 +54,16 @@
 			</div>
 		</div>
 		<div class="menu">
-			<ul class="row justify-content-md-around menulist">
+			<ul class="row col-md-12 menulist" id="menuList">
 				<li><a href="rankings.html">Rankings</a></li>
 				<li><a href="events.html">Events</a></li>
 				<li><a href="players.html">Players</a></li>
-				<li><a href="#">Location</a></li>
-				<li><a href="#">LogIn</a></li>
+				<li><a href="#map">Location</a></li>
+				<li><a href="#login" id="modal_but-log">Log In</a></li>
 			</ul>
 		</div>
 		<div class="menu">
-			<ul class="row justify-content-md-around menulist">
+			<ul class="row justify-content-md-around menulist justify-content-around">
 				<li id="dota2_btn" onclick="showDota2()">Dota2</li>
 				<li id="csgo_btn" onclick="showCsGo()">CS:GO</li>
 				<li id="sc2_btn" onclick="showSc2()">SC2</li>
@@ -57,40 +78,40 @@
 					<p>Liquid`Kuroky</p>
 					<div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md ">Dota 2 Champions League Season 6</small>
+							<small class="col-md col">Dota 2 Champions League Season 6</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md ">The Defense Season 5</small>
+							<small class="col-md col">The Defense Season 5</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="bronze"></div>
 							</div>
-							<small class="col-md ">World Cyber Arena 2015</small>
+							<small class="col-md col">World Cyber Arena 2015</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md ">The Shanghai Major 2016</small>
+							<small class="col-md col">The Shanghai Major 2016</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md ">ESL One Manila 2016</small>
+							<small class="col-md col">ESL One Manila 2016</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md ">Manila Major 2016</small>
+							<small class="col-md col">Manila Major 2016</small>
 						</div>
 					</div>
 				</div>
@@ -99,28 +120,28 @@
 					<p>Liquid`MATUMBAMAN</p>
 					<div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md">Dota 2 Champions League Season 6</small>
+							<small class="col-md col">Dota 2 Champions League Season 6</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="bronze"></div>
 							</div>
-							<small class="col-md">World Cyber Arena 2015</small>
+							<small class="col-md col">World Cyber Arena 2015</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md">The Shanghai Major 2016</small>
+							<small class="col-md col">The Shanghai Major 2016</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md">Manila Major 2016</small>
+							<small class="col-md col">Manila Major 2016</small>
 						</div>
 					</div>
 				</div>
@@ -128,35 +149,35 @@
 					<img src="Images/mind_control.jpg">
 					<p>Liquid`MinD_ContRol</p>
 					<div>
-						<div class="row ">
-							<div class="col-md-auto">
+						<div class="row">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md">Dota 2 Champions League Season 6</small>
+							<small class="col-md col">Dota 2 Champions League Season 6</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="bronze"></div>
 							</div>
-							<small class="col-md">World Cyber Arena 2015</small>
+							<small class="col-md col">World Cyber Arena 2015</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md">The Shanghai Major 2016</small>
+							<small class="col-md col">The Shanghai Major 2016</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md">ESL One Manila 2016</small>
+							<small class="col-md col">ESL One Manila 2016</small>
 						</div>
 						<div class="row ">
-							<div class="col-md-auto ">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md">Manila Major 2016</small>
+							<small class="col-md col">Manila Major 2016</small>
 						</div>
 					</div>
 				</div>
@@ -165,40 +186,40 @@
 					<p>Liquid`Miracle-</p>
 					<div>
 						<div class="row ">
-							<div class="col-md-auto ">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md">Dota 2 Champions League Season 6</small>
+							<small class="col-md col">Dota 2 Champions League Season 6</small>
 						</div>
 						<div class="row ">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md ">The Defense Season 5</small>
+							<small class="col-md col">The Defense Season 5</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="bronze"></div>
 							</div>
-							<small class="col-md">World Cyber Arena 2015</small>
+							<small class="col-md col">World Cyber Arena 2015</small>
 						</div>
 						<div class="row ">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md">The Shanghai Major 2016</small>
+							<small class="col-md col">The Shanghai Major 2016</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md">ESL One Manila 2016</small>
+							<small class="col-md col">ESL One Manila 2016</small>
 						</div>
 						<div class="row ">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md">Manila Major 2016</small>
+							<small class="col-md col">Manila Major 2016</small>
 						</div>
 					</div>
 				</div>
@@ -207,22 +228,22 @@
 					<p>Liquid`GH</p>
 					<div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md ">Dota 2 Champions League Season 6</small>
+							<small class="col-md col">Dota 2 Champions League Season 6</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md ">The Defense Season 5</small>
+							<small class="col-md col">The Defense Season 5</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="bronze"></div>
 							</div>
-							<small class="col-md">World Cyber Arena 2015</small>
+							<small class="col-md col">World Cyber Arena 2015</small>
 						</div>
 					</div>
 				</div>
@@ -236,46 +257,46 @@
 					<p>Liquid`nitr0</p>
 					<div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md ">RGN Intercontinental Open II - NA</small>
+							<small class="col-md col">RGN Intercontinental Open II - NA</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md ">iBUYPOWER Invitational 2015 - Fall</small>
+							<small class="col-md col">iBUYPOWER Invitational 2015 - Fall</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md ">ESL ESEA Pro League Season 2 - North America</small>
+							<small class="col-md col">ESL ESEA Pro League Season 2 - North America</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md ">iBUYPOWER Cup</small>
+							<small class="col-md col">iBUYPOWER Cup</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md ">Alienware Area 51 Cup</small>
+							<small class="col-md col">Alienware Area 51 Cup</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md ">iBUYPOWER Invitational 2015</small>
+							<small class="col-md col">iBUYPOWER Invitational 2015</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md ">ESL One Cologne 2016</small>
+							<small class="col-md col">ESL One Cologne 2016</small>
 						</div>
 					</div>
 				</div>
@@ -284,34 +305,34 @@
 					<p>Liquid`EliGe</p>
 					<div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md">RGN Intercontinental Open II - NA</small>
+							<small class="col-md col">RGN Intercontinental Open II - NA</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md">ESL ESEA Pro League Season 2 - North America</small>
+							<small class="col-md col">ESL ESEA Pro League Season 2 - North America</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md">iBUYPOWER Invitational 2015 - Fall</small>
+							<small class="col-md col">iBUYPOWER Invitational 2015 - Fall</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md">Alienware Area 51 CS:GO Cup</small>
+							<small class="col-md col">Alienware Area 51 CS:GO Cup</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="bronze"></div>
 							</div>
-							<small class="col-md">MLG Major Championship: Columbus</small>
+							<small class="col-md col">MLG Major Championship: Columbus</small>
 						</div>
 					</div>
 				</div>
@@ -320,16 +341,16 @@
 					<p>Liquid`TACO</p>
 					<div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md">ESL ESEA Pro League Season 2 - North America</small>
+							<small class="col-md col">ESL ESEA Pro League Season 2 - North America</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md">iBUYPOWER Invitational 2015 - Fall</small>
+							<small class="col-md col">iBUYPOWER Invitational 2015 - Fall</small>
 						</div>
 					</div>
 				</div>
@@ -338,22 +359,22 @@
 					<p>Liquid`Twistzz</p>
 					<div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md">ESL ESEA Pro League Season 2 - North America</small>
+							<small class="col-md col">ESL ESEA Pro League Season 2 - North America</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md">iBUYPOWER Invitational 2015 - Fall</small>
+							<small class="col-md col">iBUYPOWER Invitational 2015 - Fall</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md">Alienware Area 51 CS:GO Cup</small>
+							<small class="col-md col">Alienware Area 51 CS:GO Cup</small>
 						</div>
 					</div>
 				</div>
@@ -362,28 +383,28 @@
 					<p>Liquid`NAF</p>
 					<div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md ">RGN Intercontinental Open II - NA</small>
+							<small class="col-md col">RGN Intercontinental Open II - NA</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md ">Alienware Area 51 Cup</small>
+							<small class="col-md col">Alienware Area 51 Cup</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md">iBUYPOWER Invitational 2015</small>
+							<small class="col-md col">iBUYPOWER Invitational 2015</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="bronze"></div>
 							</div>
-							<small class="col-md">Clutch Con 2015</small>
+							<small class="col-md col">Clutch Con 2015</small>
 						</div>
 					</div>
 				</div>
@@ -397,16 +418,16 @@
 					<p>Liquid`uThermal</p>
 					<div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md ">DreamHack Winter 2010</small>
+							<small class="col-md col">DreamHack Winter 2010</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md ">2015 WCS Season 3</small>
+							<small class="col-md col">2015 WCS Season 3</small>
 						</div>
 					</div>
 				</div>
@@ -415,22 +436,22 @@
 					<p>Liquid`TLO</p>
 					<div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="bronze"></div>
 							</div>
-							<small class="col-md">IEM Season VIII - Sao Paulo</small>
+							<small class="col-md col">IEM Season VIII - Sao Paulo</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="bronze"></div>
 							</div>
-							<small class="col-md">HomeStory Cup VII</small>
+							<small class="col-md col">HomeStory Cup VII</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="bronze"></div>
 							</div>
-							<small class="col-md">SeatStory Cup</small>
+							<small class="col-md col">SeatStory Cup</small>
 						</div>
 					</div>
 				</div>
@@ -439,40 +460,40 @@
 					<p>Liquid`Snute</p>
 					<div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md">HomeStory Cup VI</small>
+							<small class="col-md col">HomeStory Cup VI</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md">SeatStory Cup</small>
+							<small class="col-md col">SeatStory Cup</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md">GPL 2015 International Challenge</small>
+							<small class="col-md col">GPL 2015 International Challenge</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md">HomeStory Cup VII</small>
+							<small class="col-md col">HomeStory Cup VII</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md">GWorld E-Sport Championships 2014</small>
+							<small class="col-md col">GWorld E-Sport Championships 2014</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="bronze"></div>
 							</div>
-							<small class="col-md">2014 DreamHack Open: Moscow</small>
+							<small class="col-md col">2014 DreamHack Open: Moscow</small>
 						</div>
 					</div>
 				</div>
@@ -481,34 +502,34 @@
 					<p>Liquid`Bunny</p>
 					<div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md">Gfinity G3</small>
+							<small class="col-md col">Gfinity G3</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md">Fragbite Masters Season 4</small>
+							<small class="col-md col">Fragbite Masters Season 4</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="bronze"></div>
 							</div>
-							<small class="col-md">Fragbite Masters Season 3</small>
+							<small class="col-md col">Fragbite Masters Season 3</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md">2015 WCS Season 1</small>
+							<small class="col-md col">2015 WCS Season 1</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="bronze"></div>
 							</div>
-							<small class="col-md">2015 WCS Season 2</small>
+							<small class="col-md col">2015 WCS Season 2</small>
 						</div>
 					</div>
 				</div>
@@ -517,40 +538,40 @@
 					<p>Liquid`MaNa</p>
 					<div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md ">2012 DreamHack Open: Summer</small>
+							<small class="col-md col">2012 DreamHack Open: Summer</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="gold"></div>
 							</div>
-							<small class="col-md ">Electronic Sports World Cup 2012</small>
+							<small class="col-md col">Electronic Sports World Cup 2012</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md">ASUS ROG Summer 2011</small>
+							<small class="col-md col">ASUS ROG Summer 2011</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md">2015 WCS Season 3</small>
+							<small class="col-md col">2015 WCS Season 3</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="silver"></div>
 							</div>
-							<small class="col-md">Electronic Sports World Cup 2011</small>
+							<small class="col-md col">Electronic Sports World Cup 2011</small>
 						</div>
 						<div class="row">
-							<div class="col-md-auto">
+							<div class="col-md-auto col-auto">
 								<div class="bronze"></div>
 							</div>
-							<small class="col-md">IEM Season VI - Cologne</small>
+							<small class="col-md col">IEM Season VI - Cologne</small>
 						</div>
 					</div>
 				</div>
@@ -559,20 +580,19 @@
 
 
 
-		<div class="footer d-md-flex flex-row">
-			<div class="d-md-flex col-md-3 justify-content-md-center align-items-md-center footer-element">
+		<div class="footer d-md-flex flex-row d=flex">
+			<div class="d-md-flex col-md-3 justify-content-md-center align-items-md-center footer-element d-flex justify-content-center align-items-center">
 				Team Liquid 2009-2018 © 
 			</div>
-			<div class="d-md-flex col-md-6 justify-content-md-center align-items-md-center footer-element">			
+			<div class="d-md-flex col-md-6 justify-content-md-center align-items-md-center footer-element d-flex justify-content-center align-items-center">			
 				All copyrights and trademarks belong to their respective owners.
 			</div>
-			<div class="d-md-flex col-md-3 justify-content-md-around align-items-md-center footer-element">
+			<div class="d-md-flex col-md-3 justify-content-md-around align-items-md-center footer-element d-flex justify-content-around align-items-center">
 				<a class="narrowsponsor" id="youtube" href="https://www.youtube.com/channel/UCLSWNf28X3mVTxTT3_nLCcw" target="_blank"></a>
 				<a class="narrowsponsor" id="facebook" href="https://www.facebook.com/teamliquid" target="_blank"></a>
 				<a class="narrowsponsor" id="twitter" href="https://twitter.com/teamliquid" target="_blank"></a>
 				<a class="narrowsponsor" id="vk" href="https://vk.com/teamliquidpro" target="_blank"></a>
 				<a class="narrowsponsor" id="insta" href="https://www.instagram.com/teamliquid/" target="_blank"></a>
-			</div>
 			</div>
 		</div>
 	</div>
@@ -593,5 +613,60 @@
    		document.getElementById('dota2').style.display = "none"
 	}	
   </script>
+  	<script>
+		var modal = document.getElementById("modalLog");
+		var btn = document.getElementById("modal_but-log");
+		var span= document.getElementsByClassName("close")[0];
+		var subm = document.getElementById("submit");
+
+		btn.onclick = function(){
+			modal.style.display = "block";
+		}
+		span.onclick = function(){
+			modal.style.display = "none";
+		}
+
+		subm.onclick = function(){
+			modal.style.display = "none";
+		}
+
+		window.onclick = function(e){
+			if(e.target == modal){
+				modal.style.display = "none";
+			}
+		}
+	</script>
+  <script>
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+    	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+     	   document.getElementById("toTop").style.display = "block";
+    	} 
+    	else {
+        	document.getElementById("toTop").style.display = "none";
+    	}
+	}
+
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+    	document.body.scrollTop = 0;
+    	document.documentElement.scrollTop = 0;
+	}
+	</script>
+  <script>
+  	var state = new Boolean(false);
+	function showMenu() {
+		if(state==false){
+   			document.getElementById('menuList').style.display = "flex";
+   			document.getElementById("menuList").style.flexDirection = "column";
+   			state=true;
+   		}
+   		else{
+   			document.getElementById('menuList').style.display = "none";
+   			state=false;
+   		}
+	}	
+	</script>
 </body>
 </html>

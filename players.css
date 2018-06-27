@@ -25,6 +25,18 @@ body{
   font-style: normal;
 }
 
+.hamburger {
+	background: url('Images/img_527805.png') center center no-repeat / contain;
+	height: inherit;
+	background-color: #F7F7F7;
+}
+.hamburger:active{
+	transform: scale(0.8);
+}
+.hamburger:hover{
+	cursor: pointer;
+}
+
 #csgo, #sc2{
 	display: none;
 }
@@ -169,6 +181,10 @@ div.content{
 	width: 20%;
 }
 
+.player-card small{
+	color: #F7F7F7;
+}
+
 .player-card div{
 	text-align: left;
 }
@@ -218,3 +234,152 @@ div.content{
 	border-right: 1px solid;
 }
 
+#toTop{
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  z-index: 99;
+  font-size: 18px;
+  outline: none;
+  cursor: pointer;
+  height: 60px;
+  width: 60px; 
+  border-radius: 50%;
+  transition: 0.25;
+  background: url("Images/app-1646212_960_720.png") center no-repeat;
+  background-size: contain;
+  border-color: black;
+}
+
+/*modal*/
+.modal{
+	display: none;
+	position: fixed;
+	z-index: 100;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0,0.8);
+
+}
+
+.modal-content{
+	background-color: gray;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px black;
+	width: 20%;
+	position: relative;
+}
+
+.modal-content div{
+	margin-bottom: 10px;
+}
+
+.modal-content input, button{
+	width: 100%;
+	margin: 5px;
+}
+
+.submit-button{
+	width: 100px;
+}
+
+.close{
+	position: absolute;
+	right: 2px;
+	top: 2px;
+	color: red;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+
+@media screen and (min-width: 1024px) {
+  .news-card{
+		width: 100%;
+	}
+	#menuList{
+		display: flex;
+		justify-content: space-around;
+	}
+	.modal-content{
+		width: 20%;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.news-card{
+		width: 100%;
+	}
+	#menuList{
+		display: flex;
+		justify-content: space-around;
+	}
+	#toTop{
+		bottom: 5px;
+		right: 5px;
+		width: 40px;
+		height: 40px;	
+	}
+	.modal-content{
+		width: 20%;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.sponsors {
+		display: none;
+	}
+	#menuList{
+		display: none;
+	}
+	.arrows{
+		width: 15px;
+   		height: 15px;
+	}
+	.player-card{
+		width: 100%;
+	}
+	#toTop{
+		bottom: 5px;
+		right: 5px;
+		width: 20px;
+		height: 20px;	
+	}
+	.arrows:hover{
+   		width: 20px;
+    	height: 20px;
+	}
+	.modal-content{
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 576px) {
+	#menuList{
+		display: none;
+	}
+	.arrows{
+		width: 10px;
+   		height: 10px;
+	}
+	.player-card{
+		width: 100%;
+	}
+	#toTop{
+		bottom: 5px;
+		right: 5px;
+		width: 30px;
+		height: 30px;	
+	}
+	.arrows:hover{
+   		width: 15px;
+    	height: 15px;
+	}
+	.modal-content{
+		width: 100%;
+	}
+}

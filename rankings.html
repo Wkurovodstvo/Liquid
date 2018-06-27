@@ -12,12 +12,33 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 </head>
 <body>
+	<div class="modal" id="modalLog">
+		<div class="modal-content">
+			<span class="close">&times</span>
+				<div>
+					<input type="text" placeholder="nickname">
+				</div>
+				<div>
+					<input type="text" placeholder="e-mail">
+				</div>
+				<div>
+					<input type="text" placeholder="phone">
+				</div>
+				<div>
+					<button class="submit-button" id="submit">submit</button>
+				</div>
+		</div>
+	</div>
+<button onclick="topFunction()" id="toTop" title="Go to top"></button>
 <div class="container">
 		<div class="row">
-			<div class="col-md-2 topBar">
+			<div class="col-md-3 col-sm-10 col-8 topBar">
 				<a href="index.html" id="logo"></a>
 			</div>
-			<div class="col-md topBar">
+			<div class="col-sm-2 col-4 topBar d-md-none">
+				<div class="hamburger" onclick="showMenu()"></div>
+			</div>
+			<div class="col-md topBar sponsors">
 				<div class="row justify-content-md-center">
 					<a href="https://www.dell.com/en-us/gaming/alienware?~ck=mn" target="_blank" id="alienware" class="widesponsor"></a>
 				</div>
@@ -33,347 +54,348 @@
 			</div>
 		</div>
 		<div class="menu">
-			<ul class="row justify-content-md-around menulist">
+			<ul class="row col-md-12 menulist" id="menuList">
 				<li><a href="rankings.html">Rankings</a></li>
 				<li><a href="events.html">Events</a></li>
 				<li><a href="players.html">Players</a></li>
-				<li><a href="#">Location</a></li>
-				<li><a href="#">LogIn</a></li>
+				<li><a href="#map">Location</a></li>
+				<li><a href="#login" id="modal_but-log">Log In</a></li>
 			</ul>
 		</div>
 		<div class="menu">
-			<ul class="row justify-content-md-around menulist">
+			<ul class="row justify-content-md-around menulist justify-content-around">
 				<li id="dota2_btn" onclick="showDota2()">Dota2</li>
 				<li id="csgo_btn" onclick="showCsGo()">CS:GO</li>
 				<li id="sc2_btn" onclick="showSc2()">SC2</li>
 			</ul>
 		</div>
+
 		<div class="row rank-content">
 			<div class="col-md-12 rank-wrap" id="dota2">
 				<h2 class="row justify-content-md-left">Rankings</h2>
 				<div class="row">
-					<div class="d-md-flex flex-column col-md-6">
-						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+					<div class="d-md-flex flex-column col-md-6 col-12 d-flex">
+						<div class="row align-items-md-center rank-entity align-items-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center d-flex col-1">
 								1
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag russia"></div>
 								Virtus Pro
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 justify-content-left d-flex">
 								1499
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								2
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag eu"></div>
 								Team Liquid
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1464
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								3
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag china"></div>
 								PSG.LGD
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1460
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								4
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag usa"></div>
 								Optic Gaming
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1331
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								5
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag eu"></div>
 								Team Secret
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1322
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								6
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag usa"></div>
 								VGJ.Storm
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1305
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								7
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag china"></div>
 								Vici Gaming
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1299
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								8
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag philippines"></div>
 								TnC
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1278
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								9
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag russia"></div>
 								FlyToMoon.Winstrike
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1264
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								10
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag china"></div>
 								Newbee
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1262
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								11
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag malaysia"></div>
 								Fnatic
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1260
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								12
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag philippines"></div>
 								Mineski
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1250
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								13
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag eu"></div>
 								OG Dota2
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1248
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								14
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag brazil"></div>
 								paiN Gaming
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1248
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								15
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag usa"></div>
 								Evil Geniuses
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1199
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								16
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag china"></div>
 								Invictus Gaming
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1170
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								17
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag usa"></div>
 								compLexity Gaming
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1161
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								18
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag china"></div>
 								VGJ.Thunder
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1160
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								19
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag china"></div>
 								LGD.Forever Young
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1151
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								20
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag china"></div>
 								Keen Gaming
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1142
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								21
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag cis"></div>
 								Team Spirit
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1134
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								22
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag russia"></div>
 								ESPADA
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1130
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								23
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag china"></div>
 								Team Serenity
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1104
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								24
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag china"></div>
 								For The Dream
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1101
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								25
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag ukraine"></div>
 								Natus Vincere
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1091
 								<a><i class="icon-up-small green"></i></a>
 							</div>
@@ -381,10 +403,10 @@
 					</div>
 					<div class="col-md-6 d-md-flex justify-content-md-center">
 						<div class="rank-team col-md-12">		
-							<div class="d-md-flex justify-content-md-center">
+							<div class="d-md-flex justify-content-md-center d-flex justify-content-center">
 								<div class="rank-team_avatar virtus-pro"></div>
 							</div>		
-							<div class="d-md-flex flex-row justify-content-md-between align-items-md-end team-prev">				
+							<div class="d-md-flex flex-row justify-content-md-between align-items-md-end team-prev d-flex justify-content-between align-items-end">				
 								<div>Virtus Pro</div>
 								<div>
 									<small>Money earned:</small>
@@ -393,42 +415,42 @@
 							</div>	
 							<div class="container">
 								<div class="row">				
-									<div class="col-md-3">Statistic</div>
-									<div class="col-md-3 text-center">May</div>
-									<div class="col-md-3 text-center">June</div>
-									<div class="col-md-3 text-center">All time</div>
+									<div class="col-md-3 col-2">Statistic</div>
+									<div class="col-md-3 col-3 text-center">May</div>
+									<div class="col-md-3 col-3 text-center">June</div>
+									<div class="col-md-3 col-4 text-center">All time</div>
 								</div>
 								<div class="row">				
-									<div class="col-md-3">Win rate</div>
-									<div class="col-md-3 text-center">82%</div>
-									<div class="col-md-3 text-center">75%</div>
-									<div class="col-md-3 text-center">54%</div>
+									<div class="col-md-3 col-2">Win rate</div>
+									<div class="col-md-3 col-3 text-center">82%</div>
+									<div class="col-md-3 col-3 text-center">75%</div>
+									<div class="col-md-3 col-4 text-center">54%</div>
 								</div>
 								<div class="row">				
-									<div class="col-md-3">Matches:</div>
-									<div class="col-md-3 text-center d-md-flex flex-row justify-content-md-center">
+									<div class="col-md-3 col-2">Matches:</div>
+									<div class="col-md-3 col-3 text-center d-md-flex flex-row justify-content-md-center d-flex justify-content-center">
 										<p class="green">9</p>
 										<p class="white">/0/</p>
 										<p class="red">2</p>
 									</div>
-									<div class="col-md-3 text-center d-md-flex flex-row justify-content-md-center">
+									<div class="col-md-3 col-3 text-center d-md-flex flex-row justify-content-md-center d-flex justify-content-center">
 										<p class="green">6</p>
 										<p class="white">/0/</p>
 										<p class="red">2</p>
 									</div>
-									<div class="col-md-3 text-center d-md-flex flex-row justify-content-md-center">
+									<div class="col-md-3 col-4 text-center d-md-flex flex-row justify-content-md-center d-flex justify-content-center">
 										<p class="green">505</p>
 										<p class="white">/65/</p>
 										<p class="red">363</p>
 									</div>
 								</div>
-								<div class="row d-md-flex flex-row justify-content-md-around">
+								<div class="row d-md-flex flex-row justify-content-md-around d-flex justify-content-around">
 									<p>Current streak</p>
 									<p class="red">1 loss in a row</p>
 								</div>
 							</div>
 							<div class="container">
-								<div class="d-md-flex flex-row justify-content-md-center">
+								<div class="d-md-flex flex-row justify-content-md-center d-flex justify-content-center">
 									Roster
 								</div>
 									<div class="row">
@@ -467,339 +489,339 @@
 			<div class="col-md-12 rank-wrap" id="csgo">
 				<h2 class="row justify-content-md-left">Rankings</h2>
 				<div class="row">
-					<div class="d-md-flex flex-column col-md-6">
-						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+					<div class="d-md-flex flex-column col-md-6 d-flex col-12">
+						<div class="row align-items-md-center rank-entity align-items-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								1
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag denmark"></div>
 								Astralis
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1536
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								2
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag eu"></div>
 								FaZe Clan
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1414
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								3
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag ukraine"></div>
 								Natus Vincere
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1411
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								4
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag eu"></div>
 								mousesports
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1325
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								5
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag usa"></div>
 								Team Liquid
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1303
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								6
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag usa"></div>
 								NRG eSports
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1290
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								7
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag france"></div>
 								G2 Esports
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1260
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								8
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag brazil"></div>
 								SK Gaming
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1257
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								9
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag denmark"></div>
 								North
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1255
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								10
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag turkey"></div>
 								Space Soldiers
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1241
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								11
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag sweden"></div>
 								Fnatic
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1215
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								12
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag usa"></div>
 								Cloud9
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1211
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								13
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag sweden"></div>
 								Ninjas in Pyjamas
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1208
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								14
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag sweden"></div>
 								GODSENT
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1206
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								15
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag eu"></div>
 								HellRaisers
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1205
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								16
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag eu"></div>
 								Imperial
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1179
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								17
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag poland"></div>
 								AGO Gaming
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1177
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								18
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag australia"></div>
 								ORDER
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1171
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								19
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag bulgaria"></div>
 								Wirtigo
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1170
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								20
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag china"></div>
 								Tainted Minds
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1170
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								21
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag germany"></div>
 								BIG
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1168
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								22
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag china"></div>
 								TyLoo
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1159
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								23
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag australia"></div>
 								Grayhound Gaming
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1156
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								24
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag usa"></div>
 								Rogue
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1152
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								25
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag eu"></div>
 								OpTic Gaming
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1149
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6 d-md-flex justify-content-md-center">
+					<div class="col-md-6 d-md-flex justify-content-md-center col-12">
 						<div class="rank-team col-md-12">		
-							<div class="d-md-flex justify-content-md-center">
+							<div class="d-md-flex justify-content-md-center d-flex justify-content-center">
 								<div class="rank-team_avatar astralis"></div>
 							</div>		
-							<div class="d-md-flex flex-row justify-content-md-between align-items-md-end team-prev">				
+							<div class="d-md-flex flex-row justify-content-md-between align-items-md-end team-prev d-flex justify-content-between align-items-end d-flex justify-content-between align-items-end">				
 								<div>Astralis</div>
 								<div>
 									<small>Money earned:</small>
@@ -808,36 +830,36 @@
 							</div>	
 							<div class="container">
 								<div class="row">				
-									<div class="col-md-3">Statistic</div>
-									<div class="col-md-3 text-center">May</div>
-									<div class="col-md-3 text-center">June</div>
-									<div class="col-md-3 text-center">All time</div>
+									<div class="col-md-3 col-2">Statistic</div>
+									<div class="col-md-3 col-3 text-center">May</div>
+									<div class="col-md-3 col-3 text-center">June</div>
+									<div class="col-md-3 col-4 text-center">All time</div>
 								</div>
 								<div class="row">				
-									<div class="col-md-3">Win rate</div>
-									<div class="col-md-3 text-center">100%</div>
-									<div class="col-md-3 text-center">92%</div>
-									<div class="col-md-3 text-center">65%</div>
+									<div class="col-md-3 col-2">Win rate</div>
+									<div class="col-md-3 col-3 text-center">100%</div>
+									<div class="col-md-3 col-3 text-center">92%</div>
+									<div class="col-md-3 col-4 text-center">65%</div>
 								</div>
 								<div class="row">				
-									<div class="col-md-3">Matches:</div>
-									<div class="col-md-3 text-center d-md-flex flex-row justify-content-md-center">
+									<div class="col-md-3 col-2">Matches:</div>
+									<div class="col-md-3 col-3 text-center d-md-flex flex-row justify-content-md-center d-flex justify-content-center">
 										<p class="green">4</p>
 										<p class="white">/0/</p>
 										<p class="red">0</p>
 									</div>
-									<div class="col-md-3 text-center d-md-flex flex-row justify-content-md-center">
+									<div class="col-md-3 col-3 text-center d-md-flex flex-row justify-content-md-center d-flex justify-content-center">
 										<p class="green">11</p>
 										<p class="white">/0/</p>
 										<p class="red">1</p>
 									</div>
-									<div class="col-md-3 text-center d-md-flex flex-row justify-content-md-center">
+									<div class="col-md-3 col-4 text-center d-md-flex flex-row justify-content-md-center d-flex justify-content-center">
 										<p class="green">287</p>
 										<p class="white">/1/</p>
 										<p class="red">146</p>
 									</div>
 								</div>
-								<div class="row d-md-flex flex-row justify-content-md-around">
+								<div class="row d-md-flex flex-row justify-content-md-around d-flex justify-content-around">
 									<p>Current streak</p>
 									<p class="green">11 wins in a row</p>
 								</div>
@@ -881,339 +903,339 @@
 			</div><div class="col-md-12 rank-wrap" id="sc2">
 				<h2 class="row justify-content-md-left">Rankings</h2>
 				<div class="row">
-					<div class="d-md-flex flex-column col-md-6">
+					<div class="d-md-flex flex-column col-md-6 col-12">
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								1
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag korea"></div>
 								Maru
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1348
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								2
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag korea"></div>
 								HerO
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1261
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								3
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag korea"></div>
 								Classic
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1257
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								4
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag korea"></div>
 								Rogue
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1247
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								5
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag korea"></div>
 								TY
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1227
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								6
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag korea"></div>
 								Dark.Sc2
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1206
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								7
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag korea"></div>
 								Stats
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1185
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								8
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag usa"></div>
 								Neeb
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1184
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								9
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag korea"></div>
 								soO
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1181
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								10
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag korea"></div>
 								Dear
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1170
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								11
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag korea"></div>
 								Solar
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1157
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								12
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag korea"></div>
 								Zest
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1140
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								13
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag korea"></div>
 								Byun
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
-								1135
-								<a><i class="icon-up-small gren"></i></a>
-							</div>
-						</div>
-						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
-								14
-							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
-								<div class="flag korea"></div>
-								GuMiho
-							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1135
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
+								14
+							</div>
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
+								<div class="flag korea"></div>
+								GuMiho
+							</div>
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
+								1135
+								<a><i class="icon-up-small green"></i></a>
+							</div>
+						</div>
+						<div class="row align-items-md-center rank-entity">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								15
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag korea"></div>
 								herO.kr
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1127
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								16
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag netherlands"></div>
 								uThermal
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1114
 								<a><i class="icon-up-small green"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								17
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag finland"></div>
 								Serral
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1107
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								18
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag korea"></div>
 								sOs.sc2
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1105
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								19
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag korea"></div>
 								Trap
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1084
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								20
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag korea"></div>
 								INnoVation
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1079
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								21
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag canada"></div>
 								Scarlett
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1073
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								22
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag mexico"></div>
 								SpeCial.Sc2
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1072
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								23
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag poland"></div>
 								Elazer
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1070
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								24
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag france"></div>
 								PtitDrogo
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1060
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 						<div class="row align-items-md-center rank-entity">
-							<div class="col-md-1 d-md-flex flex-row justify-content-md-center">
+							<div class="col-md-1 d-md-flex flex-row justify-content-md-center col-1">
 								25
 							</div>
-							<div class="col-md-9 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-9 d-md-flex flex-row justify-content-md-left col-8">
 								<div class="flag korea"></div>
 								Impact
 							</div>
-							<div class="col-md-2 d-md-flex flex-row justify-content-md-left">
+							<div class="col-md-2 d-md-flex flex-row justify-content-md-left col-3 d-flex">
 								1042
 								<a><i class="icon-down-small red"></i></a>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6 d-md-flex justify-content-md-center">
-						<div class="rank-team col-md-12">		
-							<div class="d-md-flex justify-content-md-center">
+					<div class="col-md-6 d-md-flex justify-content-md-center col-12">
+						<div class="rank-team col-md-12 col-12">		
+							<div class="d-md-flex justify-content-md-center d-flex justify-content-center">
 								<div class="rank-team_avatar maru"></div>
 							</div>		
-							<div class="d-md-flex flex-row justify-content-md-between align-items-md-end team-prev">				
+							<div class="d-md-flex flex-row justify-content-md-between align-items-md-end team-prev d-flex justify-content-between align-items-end">				
 								<div>Maru</div>
 								<div>
 									<small>Money earned:</small>
@@ -1222,36 +1244,36 @@
 							</div>	
 							<div class="container">
 								<div class="row">				
-									<div class="col-md-3">Statistic</div>
-									<div class="col-md-3 text-center">May</div>
-									<div class="col-md-3 text-center">June</div>
-									<div class="col-md-3 text-center">All time</div>
+									<div class="col-md-3 col-2">Statistic</div>
+									<div class="col-md-3 col-3 text-center">May</div>
+									<div class="col-md-3 col-3 text-center">June</div>
+									<div class="col-md-3 col-4 text-center">All time</div>
 								</div>
 								<div class="row">				
-									<div class="col-md-3">Win rate</div>
-									<div class="col-md-3 text-center">100%</div>
-									<div class="col-md-3 text-center">100%</div>
-									<div class="col-md-3 text-center">62%</div>
+									<div class="col-md-3 col-2">Win rate</div>
+									<div class="col-md-3 col-3 text-center">100%</div>
+									<div class="col-md-3 col-3 text-center">100%</div>
+									<div class="col-md-3 col-4 text-center">62%</div>
 								</div>
 								<div class="row">				
-									<div class="col-md-3">Matches:</div>
-									<div class="col-md-3 text-center d-md-flex flex-row justify-content-md-center">
+									<div class="col-md-3 col-2">Matches:</div>
+									<div class="col-md-3 col-3 text-center d-md-flex flex-row justify-content-md-center d-flex justify-content-center">
 										<p class="green">4</p>
 										<p class="white">/0/</p>
 										<p class="red">0</p>
 									</div>
-									<div class="col-md-3 text-center d-md-flex flex-row justify-content-md-center">
+									<div class="col-md-3 col-3 text-center d-md-flex flex-row justify-content-md-center d-flex justify-content-center">
 										<p class="green">3</p>
 										<p class="white">/0/</p>
 										<p class="red">0</p>
 									</div>
-									<div class="col-md-3 text-center d-md-flex flex-row justify-content-md-center">
+									<div class="col-md-3 col-4 text-center d-md-flex flex-row justify-content-md-center d-flex justify-content-center">
 										<p class="green">181</p>
 										<p class="white">/5/</p>
 										<p class="red">105</p>
 									</div>
 								</div>
-								<div class="row d-md-flex flex-row justify-content-md-around">
+								<div class="row d-md-flex flex-row justify-content-md-around d-flex justify-content-around">
 									<p>Current streak</p>
 									<p class="green">7 wins in a row</p>
 								</div>
@@ -1262,20 +1284,19 @@
 			</div>
 		</div>
 
-		<div class="footer d-md-flex flex-row">
-			<div class="d-md-flex col-md-3 justify-content-md-center align-items-md-center footer-element">
+		<div class="footer d-md-flex flex-row d=flex">
+			<div class="d-md-flex col-md-3 justify-content-md-center align-items-md-center footer-element d-flex justify-content-center align-items-center">
 				Team Liquid 2009-2018 © 
 			</div>
-			<div class="d-md-flex col-md-6 justify-content-md-center align-items-md-center footer-element">			
+			<div class="d-md-flex col-md-6 justify-content-md-center align-items-md-center footer-element d-flex justify-content-center align-items-center">			
 				All copyrights and trademarks belong to their respective owners.
 			</div>
-			<div class="d-md-flex col-md-3 justify-content-md-around align-items-md-center footer-element">
+			<div class="d-md-flex col-md-3 justify-content-md-around align-items-md-center footer-element d-flex justify-content-around align-items-center">
 				<a class="narrowsponsor" id="youtube" href="https://www.youtube.com/channel/UCLSWNf28X3mVTxTT3_nLCcw" target="_blank"></a>
 				<a class="narrowsponsor" id="facebook" href="https://www.facebook.com/teamliquid" target="_blank"></a>
 				<a class="narrowsponsor" id="twitter" href="https://twitter.com/teamliquid" target="_blank"></a>
 				<a class="narrowsponsor" id="vk" href="https://vk.com/teamliquidpro" target="_blank"></a>
 				<a class="narrowsponsor" id="insta" href="https://www.instagram.com/teamliquid/" target="_blank"></a>
-			</div>
 			</div>
 		</div>
 	</div>
@@ -1296,5 +1317,60 @@
    		document.getElementById('dota2').style.display = "none"
 	}	
   </script>
+  	<script>
+		var modal = document.getElementById("modalLog");
+		var btn = document.getElementById("modal_but-log");
+		var span= document.getElementsByClassName("close")[0];
+		var subm = document.getElementById("submit");
+
+		btn.onclick = function(){
+			modal.style.display = "block";
+		}
+		span.onclick = function(){
+			modal.style.display = "none";
+		}
+
+		subm.onclick = function(){
+			modal.style.display = "none";
+		}
+
+		window.onclick = function(e){
+			if(e.target == modal){
+				modal.style.display = "none";
+			}
+		}
+	</script>
+  <script>
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+    	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+     	   document.getElementById("toTop").style.display = "block";
+    	} 
+    	else {
+        	document.getElementById("toTop").style.display = "none";
+    	}
+	}
+
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+    	document.body.scrollTop = 0;
+    	document.documentElement.scrollTop = 0;
+	}
+	</script>
+  <script>
+  	var state = new Boolean(false);
+	function showMenu() {
+		if(state==false){
+   			document.getElementById('menuList').style.display = "flex";
+   			document.getElementById("menuList").style.flexDirection = "column";
+   			state=true;
+   		}
+   		else{
+   			document.getElementById('menuList').style.display = "none";
+   			state=false;
+   		}
+	}	
+	</script>
 </body>
 </html>

@@ -12,12 +12,33 @@
 <link rel="stylesheet" type="text/css" href="events.css">
 </head>
 <body>
+	<div class="modal" id="modalLog">
+		<div class="modal-content">
+			<span class="close">&times</span>
+				<div>
+					<input type="text" placeholder="nickname">
+				</div>
+				<div>
+					<input type="text" placeholder="e-mail">
+				</div>
+				<div>
+					<input type="text" placeholder="phone">
+				</div>
+				<div>
+					<button class="submit-button" id="submit">submit</button>
+				</div>
+		</div>
+	</div>
+	<button onclick="topFunction()" id="toTop" title="Go to top"></button>
 	<div class="container">
-		<div class="row">_
-			<div class="col-md-2 topBar">
+		<div class="row">
+			<div class="col-md-3 col-sm-10 col-8 topBar">
 				<a href="index.html" id="logo"></a>
 			</div>
-			<div class="col-md topBar">
+			<div class="col-sm-2 col-4 topBar d-md-none">
+				<div class="hamburger" onclick="showMenu()"></div>
+			</div>
+			<div class="col-md topBar sponsors">
 				<div class="row justify-content-md-center">
 					<a href="https://www.dell.com/en-us/gaming/alienware?~ck=mn" target="_blank" id="alienware" class="widesponsor"></a>
 				</div>
@@ -33,17 +54,18 @@
 			</div>
 		</div>
 		<div class="menu">
-			<ul class="row justify-content-md-around menulist">
+			<ul class="row col-md-12 menulist" id="menuList">
 				<li><a href="rankings.html">Rankings</a></li>
 				<li><a href="events.html">Events</a></li>
 				<li><a href="players.html">Players</a></li>
-				<li><a href="#forum">Location</a></li>
-				<li><a href="#hostory">LogIn</a></li>
+				<li><a href="#map">Location</a></li>
+				<li><a href="#login" id="modal_but-log">Log In</a></li>
 			</ul>
 		</div>
 
+
 		<div class="row news-content">
-			<div class="col-md-9 news-wrap">
+			<div class="col-lg-9 col-md-8 col-sm-12 news-wrap">
 				<h2 class="d-md-flex justify-content-md-left">Events</h2>
 				<div class="d-md-flex flex-wrap justify-content-md-around">
 					<div class="news-card">
@@ -53,9 +75,6 @@
 							<div class="active-text">The International 8 arrives!</div>
 							<p>The International, often abbreviated as TI, is an annual tournament organized by Valve. In 2015 Valve increased their number of hosted events, founding the Dota Major Championships which incorporates The International into its structure. The International remains the biggest and most prestigious event on the Major Championship circuit.</p>
 						</div>
-						<div class="card-time">
-							<p>June 12 2018</p>
-						</div>
 				 	</div>
 				 	<div class="news-card">
 						<div class="card-img" id="card-2"></div>
@@ -63,9 +82,6 @@
 							<span class="game-icon">Dota2</span>
 							<div class="active-text">EPICENTER XL</div>
 							<p>The third installment of EPICENTER is a tournament by Epic Esports Events that will be held in Moscow from April 27th to May 6th. The main event will be held at the VTB Ice Palace on May 4–6.</p>
-						</div>
-						<div class="card-time">
-							<p>December 09 2017</p>
 						</div>
 				 	</div>
 				 	<div class="news-card">
@@ -75,9 +91,6 @@
 							<div class="active-text">DreamHack Masters Marseille 2018</div>
 							<p>DreamHack Masters Marseille is the first Masters tournament of 2018, this time visiting Marseille, France. 16 Teams from around the world are in attendance, fighting over their share of the $250,000 USD prize pool in the standard DreamHack Masters format. The event is also part of the first season of the Intel Grand Slam.</p>
 						</div>
-						<div class="card-time">
-							<p>November 25 2017</p>
-						</div>
 				 	</div>
 				 	<div class="news-card">
 						<div class="card-img" id="card-4"></div>
@@ -85,9 +98,6 @@
 							<span class="game-icon">CS:GO</span>
 							<div class="active-text">ESL One: Cologne 2018</div>
 							<p>ESL One: Cologne 2018 is the fifth time ESL's headline event returns to Germany, once again in the Lanxess-Arena, with 16 teams competing for a share of the $300,000 USD prize pool as well as a the opportunity of another tournament win towards the first season of the Intel Grand Slam.</p>
-						</div>
-						<div class="card-time">
-							<p>April 14 2018</p>
 						</div>
 				 	</div>
 				 	<div class="news-card">
@@ -97,9 +107,6 @@
 							<div class="active-text">World Electronic Sports Games 2017</div>
 							<p>World Electronic Sports Games 2017 is a professional E-sport tournament. The WESG 2017 Grand Finals jointly hosted by Haikou Municipal People's Government and Alisports, organized by Hainan Sporting Events Co., Ltd.</p>
 						</div>
-						<div class="card-time">
-							<p>April 06 2018</p>
-						</div>
 				 	</div>
 				 	<div class="news-card">
 						<div class="card-img" id="card-6"></div>
@@ -108,178 +115,179 @@
 							<div class="active-text">Arena World Championship 2018!</div>
 							<p>The Arena World Championship 2017 was the tenth World Championship for World of Warcraft 3v3 Arenas. Twelve teams earned their place to compete at BlizzCon by qualifying through their regional tournaments.</p>
 						</div>
-						<div class="card-time">
-							<p>November 26 2017</p>
-						</div>
 				 	</div>
-				 </div>
+				</div>
+
+
+
 			</div>
-			<div class="col-md-3 results-wrap">
+			
+			<div class="col-lg-3 col-md-4 col-sm-12 col-12 results-wrap">
 				<h2 class="d-md-flex justify-content-md-left">Results</h2>
-				<div class="d-md-flex-column disc">
-						<div class="disc-head d-md-flex flex-row justify-content-md-center">Dota2</div>
-						<div class="disc-body d-md-flex flex-column">
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+				<div class="d-md-flex-column disc d-flex-column">
+						<div class="disc-head d-md-flex flex-row justify-content-md-center d-flex justify-content-center">Dota2</div>
+						<div class="disc-body d-md-flex d-sm-flex d-flex flex-column">
+							<div class="d-md-flex d-sm-flex d-flex flex-row justify-content-md-between justify-content-sm-around justify-content-around">
+								<div class="d-md-flex d-sm-flex d-flex flex-row">
 									<div class="flag usa"></div>
 									<p>Leviathan</p>
 								</div>
 								<div>0:1</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-md-flex d-sm-flex d-flex flex-row">
 									<div class="flag usa"></div>
 									<p>coL</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-sm-flex d-md-flex d-flex flex-row justify-content-md-between justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex d-flex flex-row">
 									<div class="flag usa"></div>
 									<p>Immortals</p>
 								</div>
 								<div>0:1</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-sm-flex d-md-flex d-flex flex-row">
 									<div class="flag usa"></div>
 									<p>VG.JS</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-sm-flex d-flex d-md-flex flex-row justify-content-md-between justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag usa"></div>
 									<p>OpTic</p>
 								</div>
 								<div>1:0</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag china"></div>
 									<p>Baidu</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-sm-flex d-md-flex d-flex flex-row justify-content-md-between justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag eu"></div>
 									<p>BlinkPool</p>
 								</div>
 								<div>1:0</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag eu"></div>
 									<p>Kingdra</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-sm-flex d-md-flex d-flex flex-row justify-content-md-between justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag brazil"></div>
 									<p>SG</p>
 								</div>
 								<div>2:0</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag peru"></div>
 									<p>Torus</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-sm-flex d-md-flex d-flex flex-row justify-content-md-between justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag usa"></div>
 									<p>OpTic</p>
 								</div>
 								<div>1:0</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag usa"></div>
 									<p>Leviathan</p>
 								</div>	
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-sm-flex d-md-flex d-flex flex-row justify-content-md-between justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag usa"></div>
 									<p>VG.JS</p>
 								</div>
 								<div>1:0</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag canada"></div>
 									<p>JaS</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-sm-flex d-md-flex d-flex flex-row justify-content-md-between justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex -md-flex flex-row d-flex">
 									<div class="flag eu"></div>
 									<p>OG</p>
 								</div>
 								<div>1:0</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag sweden"></div>
 									<p>Alliance</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-sm-flex d-md-flex d-flex flex-row justify-content-md-between justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag usa"></div>
 									<p>OpTic</p>
 								</div>
 								<div>1:0</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag usa"></div>
 									<p>CoC</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-sm-flex d-md-flex d-flex lex-row justify-content-md-between justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag poland"></div>
 									<p>Kinguin</p>
 								</div>
 								<div>1:0</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag poland"></div>
 									<p>SNG</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-sm-flex d-md-flex d-flex flex-row justify-content-md-between justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag sweden"></div>
 									<p>Alliance</p>
 								</div>
 								<div>0:1</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag canada"></div>
 									<p>WaR</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-sm-flex d-md-flex d-flex flex-row justify-content-md-between justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag eu"></div>
 									<p>FinalTribe</p>
 								</div>
 								<div>0:1</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag eu"></div>
 									<p>Kingdra</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-sm-flex d-md-flex d-flex flex-row justify-content-md-between justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag usa"></div>
 									<p>JaS</p>
 								</div>
 								<div>1:0</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag usa"></div>
 									<p>Leviathan</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-sm-flex d-md-flex d-flex flex-row justify-content-md-between justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag usa"></div>
 									<p>OpTic</p>
 								</div>
 								<div>0:1</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag usa"></div>
 									<p>VG.JS</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-sm-flex d-md-flex flex-row d-flex justify-content-md-between justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag china"></div>
 									<p>Baidu</p>
 								</div>
 								<div>1:0</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag canada"></div>
 									<p>JaS</p>
 								</div>
@@ -287,169 +295,169 @@
 						</div>
 				</div>
 				<div class="d-md-flex-column disc">
-						<div class="disc-head d-md-flex flex-row justify-content-md-center">CS:GO</div>
-						<div class="disc-body d-md-flex flex-column">
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+						<div class="disc-head d-md-flex d-flex flex-row justify-content-md-center justify-content-center d-flex justify-content-center">CS:GO</div>
+						<div class="disc-body d-md-flex d-sm-flex d-flex flex-column ">
+							<div class="d-md-flex flex-row justify-content-md-between d-sm-flex justify-content-sm-around d-flex justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag argentina"></div>
 									<p>Isurus G</p>
 								</div>
 								<div>0:2</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag brazil"></div>
 									<p>W7M</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-md-flex flex-row d-flex justify-content-md-between d-sm-flex justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag usa"></div>
 									<p>NRG</p>
 								</div>
 								<div>2:0</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag usa"></div>
 									<p>Freedom 35</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-md-flex flex-row d-flex justify-content-md-between d-sm-flex justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag usa"></div>
 									<p>Rogue</p>
 								</div>
 								<div>2:0</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag usa"></div>
 									<p>Entourage</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-md-flex flex-row d-flex justify-content-md-between d-sm-flex justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag eu"></div>
 									<p>eUnited</p>
 								</div>
 								<div>2:0</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag eu"></div>
 									<p>Armada CS</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-md-flex flex-row d-flex justify-content-md-between d-sm-flex justify-content-sm-around justify-content-around d-flex justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag poland"></div>
 									<p>Kinguin</p>
 								</div>
 								<div>12:16</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag serbia"></div>
 									<p>Valiance</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-md-flex flex-row d-flex justify-content-md-between d-sm-flex justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag eu"></div>
 									<p>Imperial</p>
 								</div>
 								<div>16:7</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag cis"></div>
 									<p>Gambit</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-md-flex flex-row d-flex justify-content-md-between d-sm-flex justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag brazil"></div>
 									<p>NTC</p>
 								</div>
 								<div>7:16</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag serbia"></div>
 									<p>Valiance</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-md-flex flex-row d-flex justify-content-md-between d-sm-flex justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag china"></div>
 									<p>EHOME</p>
 								</div>
 								<div>0:2</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag china"></div>
 									<p>CyberZen</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-md-flex flex-row d-flex justify-content-md-between d-sm-flex justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag cis"></div>
 									<p>Gambit</p>
 								</div>
 								<div>16:6</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag poland"></div>
 									<p>x-kom</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-md-flex flex-row d-flex justify-content-md-between d-sm-flex justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag russia"></div>
 									<p>Winstrike</p>
 								</div>
 								<div>9:16</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag poland"></div>
 									<p>Kinguin</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-md-flex flex-row d-flex justify-content-md-between d-sm-flex justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag china"></div>
 									<p>VG.Flash</p>
 								</div>
 								<div>1:2</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag china"></div>
 									<p>5POWER</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-md-flex flex-row d-flex justify-content-md-between d-sm-flex justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag china"></div>
 									<p>Roar</p>
 								</div>
 								<div>0:2</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag china"></div>
 									<p>EHOME</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-md-flex flex-row d-flex justify-content-md-between d-sm-flex justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag china"></div>
 									<p>CyberZen</p>
 								</div>
 								<div>2:0</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag mongolia"></div>
 									<p>Mongolz</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-md-flex flex-row d-flex justify-content-md-between d-sm-flex justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag eu"></div>
 									<p>Imperial</p>
 								</div>
 								<div>16:5</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag bulgaria"></div>
 									<p>Windigo</p>
 								</div>
 							</div>
-							<div class="d-md-flex flex-row justify-content-md-around">
-								<div class="d-md-flex flex-row">
+							<div class="d-md-flex flex-row d-flex justify-content-md-between d-sm-flex justify-content-sm-around justify-content-around">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag australia"></div>
 									<p>Grayhound</p>
 								</div>
 								<div>2:0</div>
-								<div class="d-md-flex flex-row">
+								<div class="d-sm-flex d-md-flex flex-row d-flex">
 									<div class="flag australia"></div>
 									<p>Chiefs</p>
 								</div>
@@ -458,14 +466,18 @@
 				</div>
 			</div>
 		</div>
-		<div class="footer d-md-flex flex-row">
-			<div class="d-md-flex col-md-3 justify-content-md-center align-items-md-center footer-element">
+
+
+
+
+		<div class="footer d-md-flex flex-row d=flex">
+			<div class="d-md-flex col-md-3 justify-content-md-center align-items-md-center footer-element d-flex justify-content-center align-items-center">
 				Team Liquid 2009-2018 © 
 			</div>
-			<div class="d-md-flex col-md-6 justify-content-md-center align-items-md-center footer-element">			
+			<div class="d-md-flex col-md-6 justify-content-md-center align-items-md-center footer-element d-flex justify-content-center align-items-center">			
 				All copyrights and trademarks belong to their respective owners.
 			</div>
-			<div class="d-md-flex col-md-3 justify-content-md-around align-items-md-center footer-element">
+			<div class="d-md-flex col-md-3 justify-content-md-around align-items-md-center footer-element d-flex justify-content-around align-items-center">
 				<a class="narrowsponsor" id="youtube" href="https://www.youtube.com/channel/UCLSWNf28X3mVTxTT3_nLCcw" target="_blank"></a>
 				<a class="narrowsponsor" id="facebook" href="https://www.facebook.com/teamliquid" target="_blank"></a>
 				<a class="narrowsponsor" id="twitter" href="https://twitter.com/teamliquid" target="_blank"></a>
@@ -474,7 +486,61 @@
 			</div>
 		</div>
 	</div>
+	<script>
+  	var state = new Boolean(false);
+	function showMenu() {
+		if(state==false){
+   			document.getElementById('menuList').style.display = "flex";
+   			document.getElementById("menuList").style.flexDirection = "column";
+   			state=true;
+   		}
+   		else{
+   			document.getElementById('menuList').style.display = "none";
+   			state=false;
+   		}
+	}	
+	</script>
+		<script>
+		var modal = document.getElementById("modalLog");
+		var btn = document.getElementById("modal_but-log");
+		var span= document.getElementsByClassName("close")[0];
+		var subm = document.getElementById("submit");
 
+		btn.onclick = function(){
+			modal.style.display = "block";
+		}
+		span.onclick = function(){
+			modal.style.display = "none";
+		}
+
+		subm.onclick = function(){
+			modal.style.display = "none";
+		}
+
+		window.onclick = function(e){
+			if(e.target == modal){
+				modal.style.display = "none";
+			}
+		}
+	</script>
+	<script>
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+    	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+     	   document.getElementById("toTop").style.display = "block";
+    	} 
+    	else {
+        	document.getElementById("toTop").style.display = "none";
+    	}
+	}
+
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+    	document.body.scrollTop = 0;
+    	document.documentElement.scrollTop = 0;
+	}
+	</script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="slick/slick.min.js"></script>
 	<script src="script.js"></script>
