@@ -522,12 +522,14 @@
   	var state = new Boolean(false);
 	function showMenu() {
 		if(state==false){
-   			document.getElementById('menuList').style.display = "flex";
-   			document.getElementById("menuList").style.flexDirection = "column";
+   			document.getElementsByClassName('menulist')[0].style.display = "flex";
+   			document.getElementsByClassName("menulist")[0].style.flexDirection = "column";
    			state=true;
    		}
    		else{
-   			document.getElementById('menuList').style.display = "none";
+   			document.getElementsByClassName('menulist')[0].style.display = "none";
+   			document.getElementsByClassName("menulist")[0].style.flexDirection = "row";
+   			$('.menulist').attr('style', '');
    			state=false;
    		}
 	}	

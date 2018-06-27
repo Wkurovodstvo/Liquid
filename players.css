@@ -133,28 +133,39 @@ div.menu{
 	background-color: #0E2240;
 }
 
-ul.menulist{
+.menuList{
 	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
 
-ul.menulist li{
+.menulist_new{
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	color: #F7F7F7;
+}
+
+.menuList li{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 600;
 	padding: 10px;
 	color: #F7F7F7;
 }
 
-ul.menulist li a{
+.menuList li a{
 	text-decoration: none;
 	color: #F7F7F7;
 }
 
-ul.menulist li a:hover{
+.menuList li a:hover{
 	color: black;
 	cursor: pointer;
 }
 
-ul.menulist li:hover{
+.menuList li:hover{
 	color: black;
 	cursor: pointer;
 }
@@ -303,7 +314,7 @@ div.content{
   .news-card{
 		width: 100%;
 	}
-	#menuList{
+	.menuList{
 		display: flex;
 		justify-content: space-around;
 	}
@@ -316,7 +327,7 @@ div.content{
 	.news-card{
 		width: 100%;
 	}
-	#menuList{
+	.menuList{
 		display: flex;
 		justify-content: space-around;
 	}
@@ -334,7 +345,7 @@ div.content{
 	.sponsors {
 		display: none;
 	}
-	#menuList{
+	.menuList{
 		display: none;
 	}
 	.arrows{
@@ -359,7 +370,7 @@ div.content{
 	}
 }
 @media only screen and (max-width: 576px) {
-	#menuList{
+	.menuList{
 		display: none;
 	}
 	.arrows{

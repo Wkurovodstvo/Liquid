@@ -11,6 +11,11 @@ body{
 	background-size: cover;
 }
 
+.bordur{
+	border: solid black;
+	border-width: 2px;
+}
+
 div.border{
 	border: solid black;
 	border-width: 1px;
@@ -116,8 +121,10 @@ div.border{
 }
 
 .menulist{
-	display: flex;
 	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
 
 .menulist li{
@@ -518,13 +525,10 @@ li.slick-active button {
   .news-card{
 		width: 45%;
 	}
-	#menuList{
+	.menulist{
 		display: flex;
-		flex-flow: row;
+		flex-direction: row;
 		justify-content: space-around;
-	}
-	.menu{
-		display: block;
 	}
 }
 
@@ -532,7 +536,7 @@ li.slick-active button {
 	.news-card{
 		width: 100%;
 	}
-	#menuList{
+	.menulist{
 		display: flex;
 		flex-flow: row;
 		justify-content: space-around;
@@ -548,8 +552,10 @@ li.slick-active button {
 	.sponsors {
 		display: none;
 	}
-	#menuList{
+	.menulist{
 		display: none;
+		flex-direction: column;
+		justify-content: space-around;
 	}
 	.arrows{
 		width: 15px;
@@ -570,8 +576,10 @@ li.slick-active button {
 	}
 }
 @media only screen and (max-width: 576px) {
-	#menuList{
+	.menulist{
 		display: none;
+		flex-direction: column;
+		justify-content: space-around;
 	}
 	.arrows{
 		width: 10px;

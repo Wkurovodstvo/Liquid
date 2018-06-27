@@ -5,6 +5,7 @@
 <meta charset="utf-8">
 <title>Liquid-Rankings</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <link rel="shortcut icon" href="Images/300px-Team_Liquidlogo_square.png">
 <link rel="stylesheet" type="text/css" href="players.css">
 <link rel="stylesheet" type="text/css" href="fontello.css">
@@ -54,7 +55,7 @@
 			</div>
 		</div>
 		<div class="menu">
-			<ul class="row col-md-12 menulist" id="menuList">
+			<ul class="menuList">
 				<li><a href="rankings.html">Rankings</a></li>
 				<li><a href="events.html">Events</a></li>
 				<li><a href="players.html">Players</a></li>
@@ -63,7 +64,7 @@
 			</ul>
 		</div>
 		<div class="menu">
-			<ul class="row justify-content-md-around menulist justify-content-around">
+			<ul class="row justify-content-md-around menulist_new justify-content-around">
 				<li id="dota2_btn" onclick="showDota2()">Dota2</li>
 				<li id="csgo_btn" onclick="showCsGo()">CS:GO</li>
 				<li id="sc2_btn" onclick="showSc2()">SC2</li>
@@ -636,7 +637,7 @@
 			}
 		}
 	</script>
-  <script>
+  	<script>
 	window.onscroll = function() {scrollFunction()};
 
 	function scrollFunction() {
@@ -658,12 +659,14 @@
   	var state = new Boolean(false);
 	function showMenu() {
 		if(state==false){
-   			document.getElementById('menuList').style.display = "flex";
-   			document.getElementById("menuList").style.flexDirection = "column";
+   			document.getElementsByClassName('menuList')[0].style.display = "flex";
+   			document.getElementsByClassName("menuList")[0].style.flexDirection = "column";
    			state=true;
    		}
    		else{
-   			document.getElementById('menuList').style.display = "none";
+   			document.getElementsByClassName('menuList')[0].style.display = "none";
+   			document.getElementsByClassName("menuList")[0].style.flexDirection = "row";
+   			$('.menuList').attr('style', '');
    			state=false;
    		}
 	}	

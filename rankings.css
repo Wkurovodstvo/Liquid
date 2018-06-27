@@ -132,29 +132,39 @@ div.border{
 div.menu{
 	background-color: #0E2240;
 }
-
-ul.menulist{
+.menulist_new{
 	list-style-type: none;
+	color: #F7F7F7;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
 
-ul.menulist li{
+.menuList{
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.menuList li{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 600;
 	padding: 10px;
 	color: #F7F7F7;
 }
 
-ul.menulist li a{
+.menuList li a{
 	text-decoration: none;
 	color: #F7F7F7;
 }
 
-ul.menulist li a:hover{
+.menuList li a:hover{
 	color: black;
 	cursor: pointer;
 }
 
-ul.menulist li:hover{
+.menuList li:hover{
 	color: black;
 	cursor: pointer;
 }
@@ -495,10 +505,6 @@ div.content{
 	margin: 5px;
 }
 
-.submit-button{
-	width: 100px;
-}
-
 .close{
 	position: absolute;
 	right: 2px;
@@ -511,11 +517,9 @@ div.content{
 
 
 @media screen and (min-width: 1024px) {
-  .news-card{
-		width: 100%;
-	}
-	#menuList{
+	.menuList{
 		display: flex;
+		flex-direction: row;
 		justify-content: space-around;
 	}
 	.modal-content{
@@ -524,11 +528,9 @@ div.content{
 }
 
 @media only screen and (max-width: 992px) {
-	.news-card{
-		width: 100%;
-	}
-	#menuList{
+	.menuList{
 		display: flex;
+		flex-direction: row;
 		justify-content: space-around;
 	}
 	#toTop{
@@ -545,8 +547,10 @@ div.content{
 	.sponsors {
 		display: none;
 	}
-	#menuList{
+	.menuList{
 		display: none;
+		flex-direction: column;
+		justify-content: space-around;
 	}
 	.arrows{
 		width: 15px;
@@ -577,8 +581,10 @@ div.content{
 	}
 }
 @media only screen and (max-width: 576px) {
-	#menuList{
+	.menuList{
 		display: none;
+		flex-direction: column;
+		justify-content: space-around;
 	}
 	.arrows{
 		width: 10px;
