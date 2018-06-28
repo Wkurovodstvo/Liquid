@@ -69,6 +69,15 @@
 				<h2 class="d-md-flex justify-content-md-left">Events</h2>
 				<div class="d-md-flex flex-wrap justify-content-md-around">
 					<div class="news-card">
+						<div class="card-img">
+							<div id="map"></div>
+						</div>
+						<div class="card-content">
+							<span class="game-icon">Dota2</span>
+							<div class="active-text">The International 2018 location!</div>
+						</div>
+				 	</div>
+					<div class="news-card">
 						<div class="card-img" id="card-1"></div>
 						<div class="card-content">
 							<span class="game-icon">Dota2</span>
@@ -546,5 +555,22 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="slick/slick.min.js"></script>
 	<script src="script.js"></script>
+	<script>
+      var map;
+      var myLatLng = {lat: 49.246292, lng: -123.116226};
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: myLatLng,
+          zoom: 8,        
+        });
+        var marker = new google.maps.Marker({
+    		position: myLatLng,
+    		map: map,
+    		title: 'Hello World!'
+  		});
+      }
+    </script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDN1_gnXvWyucDNOyy2jWCKYHwq_h1lZPU&callback=initMap"
+    async defer></script>
 </body>
 </html>

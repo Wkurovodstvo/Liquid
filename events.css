@@ -11,6 +11,11 @@ body{
 	background-size: cover;
 }
 
+#map {
+    height: 100%;
+    width: 100%;
+}
+
 div.border{
 	border: solid black;
 	border-width: 1px;
@@ -168,6 +173,14 @@ div.content{
 	border-radius: none;
 	background-color: black;
 	margin-bottom: 20px;
+}
+
+.news-card:first-child .card-img{
+	height: 300px;
+}
+
+.news-card:first-child .card-content{
+	height: 100px;
 }
 
 .card-img{
