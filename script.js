@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    // $('.dropdown-toggle').dropdown();
     $('.sliderwrap').slick({
 		autoplay: true,
         dots: true,
@@ -13,7 +12,7 @@ $(document).ready(function(){
             settings: {
                 slidesToShow: 1,
 				slidesToScroll: 1,
-				dots: false,
+				dots: false
             }
         },
 		{
@@ -21,7 +20,7 @@ $(document).ready(function(){
             settings: {
                 slidesToShow: 1,
 				slidesToScroll: 1,
-				dots: false,
+				dots: false
             }
         }
 		]

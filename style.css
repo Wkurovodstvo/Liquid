@@ -160,7 +160,7 @@ div.border{
 .sliderwrap{
 	margin-top: 20px;
 	margin: auto;
-	width: 100%;
+	width: 90%;
 	position: relative;
 }
 
@@ -206,13 +206,14 @@ div.border{
    border-bottom: 3px solid white;
    border-left: 3px solid white;
    transform: rotate(-135deg);
-   right: 30px;
+   right: 18px;
 }
 
 .dots-container{
 	list-style-type: none;
 	display: flex;
 	justify-content: center;
+	padding-left: 0;
 }
 
 .dots-container li button {
@@ -574,6 +575,7 @@ li.slick-active button {
 	.modal-content{
 		width: 100%;
 	}
+
 }
 @media only screen and (max-width: 576px) {
 	.menulist{
